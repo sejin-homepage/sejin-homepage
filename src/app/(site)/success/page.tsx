@@ -33,7 +33,7 @@ export default function SuccessPage() {
         .sejin-timeline-description{font-size:15px;color:#666;line-height:1.6}
         .sejin-aftercare-cta{margin-top:40px}
         .sejin-aftercare-visual{display:flex;flex-direction:column;align-items:center;gap:20px}
-        .sejin-aftercare-visual img{width:100%;max-width:500px;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.15)}
+        .sejin-aftercare-visual img{width:100%;max-width:500px;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.15)}
         .sejin-aftercare-disclaimer{font-size:13px;color:#999;line-height:1.6;text-align:center;max-width:400px}
         .sejin-success-cta-bar{background:linear-gradient(135deg,var(--sejin-primary-dark) 0%,var(--sejin-primary) 100%);padding:48px 40px;text-align:center}
         .sejin-success-cta-text{font-size:36px;font-weight:700;font-style:italic;color:#fff;line-height:1.6;margin:0}
@@ -254,7 +254,7 @@ export default function SuccessPage() {
           </div>
 
           <div className="sejin-aftercare-visual">
-            <Image src={IMAGES.consultantPortrait} alt="세진컨설팅 상담" width={500} height={750} />
+            <Image src={IMAGES.aftercareConsulting} alt="세진컨설팅 사후관리 상담" width={500} height={333} />
             <p className="sejin-aftercare-disclaimer">
               ※ 현황 분석 및 성장잠재력을 평가합니다.<br/>
               대표자가 직접 접수하는 것을 지원합니다.

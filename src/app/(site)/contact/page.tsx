@@ -419,7 +419,7 @@ export default function ContactPage() {
               </p>
 
               <div className="sejin-info-image">
-                <Image src={IMAGES.profile} alt="정책자금 상담" width={300} height={400} />
+                <Image src={IMAGES.consultantPortrait} alt="정책자금 상담" width={300} height={400} />
               </div>
 
               <div className="sejin-contact-box">

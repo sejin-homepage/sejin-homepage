@@ -12,7 +12,8 @@ export const IMAGES = {
   pointCustom: `${R2}/point-custom.webp`,
   pointTransparent: `${R2}/point-transparent.webp`,
   storyBg: `${R2}/story-bg.webp`,
-  consultantPortrait: '/images/profile.jpg',
+  consultantPortrait: '/images/consultant-team.png',
+  aftercareConsulting: '/images/aftercare-consulting.png',
 
   // 정책자금
   fundHero: `${R2}/fund-hero.webp`,
@@ -34,12 +35,12 @@ export const IMAGES = {
   benefitFund: `${R2}/benefit-fund.webp`,
   benefitBid: `${R2}/benefit-bid.webp`,
   benefitHiring: `${R2}/benefit-hiring.webp`,
-  certVenture: `${R2}/cert-venture.webp`,
+  certVenture: '/images/sejin/cert-venture.webp',
   certInnobiz: '/images/sejin/cert-innobiz.png',
   certMainbiz: '/images/sejin/cert-mainbiz.png',
   certLab: '/images/sejin/cert-lab.png',
   certIso: '/images/sejin/cert-iso.png',
-  certWoman: `${R2}/cert-woman.webp`,
+  certWoman: '/images/sejin/cert-woman.webp',
 
   // 무료심사
   contactHero: `${R2}/contact-hero.webp`,
