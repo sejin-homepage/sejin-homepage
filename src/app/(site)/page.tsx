@@ -1,10 +1,34 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { IMAGES } from '@/lib/images'
+import { pageMetadata } from '@/lib/seo/metadata'
+import {
+  organizationSchema,
+  webSiteSchema,
+  localBusinessSchema,
+  faqSchema,
+  howToSchema,
+} from '@/lib/seo/schemas'
+
+export const metadata: Metadata = pageMetadata.home
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            organizationSchema(),
+            webSiteSchema(),
+            localBusinessSchema(),
+            faqSchema(),
+            howToSchema(),
+          ]),
+        }}
+      />
+
       {/* Hero Section */}
       <section id="sejin-hero" className="sejin-hero">
         <div className="sejin-hero-container">
@@ -20,13 +44,13 @@ export default function HomePage() {
             </div>
 
             <h1 className="sejin-hero-headline">
-              대표님의 역량을 분석해<br/>
+              기업의 성장 가능성을 분석해<br/>
               <span className="highlight">맞춤 자금</span>을 설계합니다
             </h1>
 
             <p className="sejin-hero-subheadline">
-              정책자금 심사부터 인증 컨설팅까지,<br/>
-              대표 컨설턴트 전문가가 1:1로 함께합니다.
+              정책자금 심사부터 기업인증 컨설팅까지,<br/>
+              전담 컨설턴트가 1:1 맞춤 상담합니다.
             </p>
 
             <div className="sejin-hero-cta-group">
@@ -56,7 +80,7 @@ export default function HomePage() {
 
           {/* Right: Hero Image */}
           <div className="sejin-hero-visual">
-            <Image src={IMAGES.serviceConsulting} alt="세진컨설팅 - 정책자금 컨설팅" width={500} height={500} priority />
+            <Image unoptimized src={IMAGES.serviceConsulting} alt="세진컨설팅 - 정책자금 컨설팅" width={500} height={500} priority />
           </div>
         </div>
       </section>
@@ -65,7 +89,7 @@ export default function HomePage() {
       <section id="sejin-interest" className="sejin-interest">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">은행 대출보다<br/>최소 연 300만원<br/>합리적인 정책자금</h2>
+            <h2 className="sejin-section-title">은행 대출 대비<br/>연 300만원 절감<br/>중소기업 정책자금</h2>
           </div>
 
           {/* Rate Comparison Grid */}
@@ -165,7 +189,7 @@ export default function HomePage() {
         <div className="sejin-cta-bar-container">
           <p className="sejin-cta-text">
             중소기업 대표님,<br className="mobile-br"/>
-            <span className="highlight">무료 상담</span>으로 <span className="highlight">금융 솔루션</span> 확인하세요
+            <span className="highlight">무료 상담</span>으로 <span className="highlight">자금조달 방안</span> 확인하세요
           </p>
         </div>
       </section>
@@ -174,14 +198,14 @@ export default function HomePage() {
       <section id="sejin-core" className="sejin-core">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">세진컨설팅의 핵심 서비스</h2>
-            <p className="sejin-section-subtitle">대표자 역량분석 기반<br className="mobile-br"/>맞춤형 컨설팅을 제공합니다</p>
+            <h2 className="sejin-section-title">세진컨설팅 핵심 서비스</h2>
+            <p className="sejin-section-subtitle">대표자 역량분석 기반<br className="mobile-br"/>맞춤형 자금 전략을 수립합니다</p>
           </div>
 
           <div className="sejin-service-grid">
             {/* Card 1: Policy Fund Consulting */}
             <Link href="/fund" className="sejin-service-card">
-              <Image src={IMAGES.serviceFund} alt="정책자금 컨설팅" width={400} height={250} className="sejin-service-image" />
+              <Image quality={90} src={IMAGES.serviceFund} alt="정책자금 컨설팅" width={400} height={250} className="sejin-service-image" />
               <div className="sejin-service-content">
                 <div className="sejin-service-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -194,9 +218,9 @@ export default function HomePage() {
                 </div>
                 <h3 className="sejin-service-title">정책자금 컨설팅</h3>
                 <p className="sejin-service-description">
-                  저금리 정책자금으로<br/>
-                  성장 기회를 확보하고<br/>
-                  맞춤 전략을 지원합니다.
+                  저금리 중소기업 정책자금<br/>
+                  으로 성장 기반을 마련하고<br/>
+                  맞춤 전략을 수립합니다.
                 </p>
                 <span className="sejin-service-link">
                   자세히 보기
@@ -210,7 +234,7 @@ export default function HomePage() {
 
             {/* Card 2: Certification Consulting */}
             <Link href="/certification" className="sejin-service-card">
-              <Image src={IMAGES.serviceCert} alt="인증 컨설팅" width={400} height={250} className="sejin-service-image" />
+              <Image quality={90} src={IMAGES.serviceCert} alt="인증 컨설팅" width={400} height={250} className="sejin-service-image" />
               <div className="sejin-service-content">
                 <div className="sejin-service-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -221,8 +245,8 @@ export default function HomePage() {
                 <h3 className="sejin-service-title">인증 컨설팅</h3>
                 <p className="sejin-service-description">
                   벤처·이노비즈 등<br/>
-                  필수 인증을 통해<br/>
-                  가치를 증명합니다.
+                  기업인증으로 세제혜택과<br/>
+                  자금우대를 확보합니다.
                 </p>
                 <span className="sejin-service-link">
                   자세히 보기
@@ -236,7 +260,7 @@ export default function HomePage() {
 
             {/* Card 3: Success Cases */}
             <Link href="/success" className="sejin-service-card">
-              <Image src={IMAGES.serviceSuccess} alt="성공사례" width={400} height={250} className="sejin-service-image" />
+              <Image quality={90} src={IMAGES.serviceSuccess} alt="성공사례" width={400} height={250} className="sejin-service-image" />
               <div className="sejin-service-content">
                 <div className="sejin-service-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -247,8 +271,8 @@ export default function HomePage() {
                 <h3 className="sejin-service-title">성공사례</h3>
                 <p className="sejin-service-description">
                   세진컨설팅과 함께한<br/>
-                  기업들의 실제 성공<br/>
-                  스토리를 확인하세요.
+                  중소기업의 실제 자금<br/>
+                  조달 사례를 확인하세요.
                 </p>
                 <span className="sejin-service-link">
                   자세히 보기
@@ -267,33 +291,33 @@ export default function HomePage() {
       <section id="sejin-info" className="sejin-info">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">세진컨설팅은<br/>다른 곳과 다릅니다</h2>
-            <p className="sejin-section-subtitle">왜 많은 대표님이 세진컨설팅을 선택할까요?</p>
+            <h2 className="sejin-section-title">세진컨설팅이<br/>선택받는 이유</h2>
+            <p className="sejin-section-subtitle">많은 중소기업 대표님이 세진컨설팅을 찾는 이유</p>
           </div>
 
           {/* Differentiation Points Grid */}
           <div className="sejin-points-grid">
             {/* Point 1: Free Diagnosis */}
             <div className="sejin-point-card">
-              <Image src={IMAGES.pointFree} alt="무료 진단" width={400} height={250} className="sejin-point-image" />
+              <Image quality={90} src={IMAGES.pointFree} alt="무료 진단" width={400} height={250} className="sejin-point-image" />
               <div className="sejin-point-content">
                 <div className="sejin-point-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </div>
-                <h3 className="sejin-point-title">무료 진단</h3>
+                <h3 className="sejin-point-title">무료 기업진단</h3>
                 <p className="sejin-point-description">
-                  부담 없이 시작하세요.<br/>
-                  현재 대표님의 역량을 정확히 분석하고<br/>
-                  지원사업을 확인해드립니다.
+                  비용 없이 시작하세요.<br/>
+                  기업 현황과 대표님 역량을 분석하고<br/>
+                  적합한 정책자금을 안내합니다.
                 </p>
               </div>
             </div>
 
             {/* Point 2: 1:1 Custom Consulting */}
             <div className="sejin-point-card">
-              <Image src={IMAGES.pointCustom} alt="1:1 맞춤 컨설팅" width={400} height={250} className="sejin-point-image" />
+              <Image quality={90} src={IMAGES.pointCustom} alt="1:1 맞춤 컨설팅" width={400} height={250} className="sejin-point-image" />
               <div className="sejin-point-content">
                 <div className="sejin-point-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
@@ -302,16 +326,16 @@ export default function HomePage() {
                 </div>
                 <h3 className="sejin-point-title">1:1 맞춤 컨설팅</h3>
                 <p className="sejin-point-description">
-                  천편일률적인 자료가 아닙니다.<br/>
+                  획일적인 컨설팅이 아닙니다.<br/>
                   대표님 기업에 꼭 맞는<br/>
-                  맞춤형 전략을 수립해드립니다.
+                  자금조달 전략을 수립해드립니다.
                 </p>
               </div>
             </div>
 
             {/* Point 3: Transparent Process */}
             <div className="sejin-point-card">
-              <Image src={IMAGES.pointTransparent} alt="투명한 프로세스" width={400} height={250} className="sejin-point-image" />
+              <Image quality={90} src={IMAGES.pointTransparent} alt="투명한 프로세스" width={400} height={250} className="sejin-point-image" />
               <div className="sejin-point-content">
                 <div className="sejin-point-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
@@ -320,7 +344,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="sejin-point-title">투명한 프로세스</h3>
                 <p className="sejin-point-description">
-                  진행 과정을 실시간으로 투명하게 공유하며,<br/>
+                  컨설팅 과정을 실시간 투명하게 공유하며,<br/>
                   불필요한 비용은<br/>
                   절대 제안하지 않습니다.
                 </p>
@@ -330,8 +354,8 @@ export default function HomePage() {
 
           {/* Expert Section */}
           <div className="sejin-expert-header">
-            <h3 className="sejin-expert-title">함께하는 전문가</h3>
-            <p className="sejin-expert-subtitle">풍부한 경험과 전문성으로<br className="mobile-br"/>기업 성장을 지원합니다</p>
+            <h3 className="sejin-expert-title">정책자금 전문 컨설턴트</h3>
+            <p className="sejin-expert-subtitle">풍부한 경험과 전문성으로<br className="mobile-br"/>중소기업 성장을 지원합니다</p>
           </div>
 
           <div className="sejin-expert-grid">
@@ -346,10 +370,10 @@ export default function HomePage() {
               <div className="sejin-expert-message">
                 <p className="sejin-expert-greeting">안녕하세요, 세진컨설팅입니다.</p>
                 <p className="sejin-expert-description">
-                  많은 대표님께서 좋은 아이템과 기술력을 갖추고도 자금 문제로 성장 기회를 놓치는 것을 보며 안타까움을 느꼈습니다.
-                  그래서 저는 대표님의 역량과 기업의 잠재력을 정확히 분석하여, 가장 적합한 정책자금 솔루션을 찾아드리고자 합니다.
+                  많은 중소기업 대표님께서 좋은 기술력을 갖추고도 자금 부족으로 성장 기회를 놓치는 모습을 보며 안타까움을 느꼈습니다.
+                  그래서 저는 대표님의 역량과 기업 잠재력을 정밀 분석하여, 가장 적합한 정책자금 솔루션을 찾아드리고자 합니다.
                   <br/><br/>
-                  단순한 서류 대행이 아닌, 대표님의 비전을 함께 고민하고 성장을 지원하는 든든한 파트너가 되겠습니다.
+                  단순한 서류 대행이 아닌, 대표님의 비전을 함께 고민하고 자금조달을 지원하는 든든한 파트너가 되겠습니다.
                 </p>
               </div>
             </div>
@@ -361,8 +385,8 @@ export default function HomePage() {
       <section id="sejin-story" className="sejin-story">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">고객 후기</h2>
-            <p className="sejin-section-subtitle">실제 이용하신 대표님들의<br className="mobile-br"/> 생생한 경험을 확인하세요</p>
+            <h2 className="sejin-section-title">정책자금 상담 후기</h2>
+            <p className="sejin-section-subtitle">실제 이용하신 대표님들의<br className="mobile-br"/> 생생한 컨설팅 후기를 확인하세요</p>
           </div>
 
           <div className="sejin-review-scroll-wrapper">

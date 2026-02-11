@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = '세진 컨설팅 - 정책자금 경영컨설팅 전문기업'
+export const alt = '세진 컨설팅 - 정부정책자금 자금확보 전문가'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -45,61 +45,38 @@ export default async function Image() {
           }}
         />
 
-        {/* Logo from public URL */}
+        {/* Logo - 원본 비율 유지 (1200:363 ≈ 3.3:1) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://sejin.ai.kr/images/logo.png"
-          width={110}
-          height={110}
-          style={{ marginBottom: 28 }}
+          width={640}
+          height={194}
+          style={{ marginBottom: 48 }}
           alt=""
         />
-
-        {/* Company name */}
-        <div
-          style={{
-            fontSize: 52,
-            fontWeight: 700,
-            color: '#212121',
-            marginBottom: 14,
-            letterSpacing: '-0.02em',
-          }}
-        >
-          세진 컨설팅
-        </div>
 
         {/* Tagline */}
         <div
           style={{
-            fontSize: 26,
+            fontSize: 52,
             fontWeight: 700,
             color: '#D4A574',
-            marginBottom: 40,
+            marginBottom: 20,
+            letterSpacing: '0.04em',
           }}
         >
-          정책자금 경영컨설팅 전문기업
+          정부정책자금 · 정부지원자금
         </div>
 
-        {/* Key stats */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 48 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ fontSize: 34, fontWeight: 700, color: '#D4A574' }}>96%</div>
-            <div style={{ fontSize: 15, color: '#94a3b8', marginTop: 6 }}>심사 통과율</div>
-          </div>
-
-          <div style={{ width: 1, height: 44, background: '#334155' }} />
-
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ fontSize: 34, fontWeight: 700, color: '#D4A574' }}>418건+</div>
-            <div style={{ fontSize: 15, color: '#94a3b8', marginTop: 6 }}>성공 실적</div>
-          </div>
-
-          <div style={{ width: 1, height: 44, background: '#334155' }} />
-
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ fontSize: 34, fontWeight: 700, color: '#D4A574' }}>2.8억</div>
-            <div style={{ fontSize: 15, color: '#94a3b8', marginTop: 6 }}>평균 조달액</div>
-          </div>
+        <div
+          style={{
+            fontSize: 44,
+            fontWeight: 700,
+            color: '#374151',
+            letterSpacing: '0.02em',
+          }}
+        >
+          자금확보 전문가
         </div>
 
         {/* URL */}
@@ -108,7 +85,7 @@ export default async function Image() {
             position: 'absolute',
             bottom: 30,
             fontSize: 16,
-            color: '#475569',
+            color: '#9CA3AF',
             letterSpacing: '0.06em',
           }}
         >

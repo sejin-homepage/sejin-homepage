@@ -2,11 +2,11 @@ import type { MetadataRoute } from 'next'
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN
 const AIRTABLE_BASE_ID = 'appZPwyTU6EfGdjC6'
-const BOARD_TABLE_ID = 'tbl70mSCu4sicfZa5'
+const BOARD_TABLE_ID = 'tbleNuxlGV59U47mZ'
 
 const FIELD_IDS = {
-  공개여부: 'fldM7DjMJMKLrCnV8',
-  작성일: 'fldiiS0vSWHqMVTNw',
+  공개여부: 'fldokDOixWld4QjgG',
+  작성일: 'fld4sk10tXdzZjQWh',
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

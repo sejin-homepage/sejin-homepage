@@ -32,7 +32,7 @@ export default function FundPage() {
         .sejin-why-example{background:#fff;border:2px solid var(--gold);border-radius:12px;padding:32px 24px;margin-top:40px;text-align:center;max-width:600px;margin-left:auto;margin-right:auto;box-shadow:0 4px 16px rgba(212,165,116,0.15)}
         .sejin-example-desc{font-size:14px;color:#666;line-height:1.5;margin-bottom:12px}
         .sejin-example-amount{font-size:28px;font-weight:700;color:var(--gold);line-height:1.2;margin-bottom:8px;display:block}
-        .sejin-example-result{font-size:14px;color:#666;line-height:1.5;margin:0}
+        .sejin-example-result{font-size:14px;color:#666;line-height:1.5;margin:0;text-wrap:balance}
         .sejin-fund-category{background:#fff;padding:80px 0}
         .sejin-tab-container{display:flex;flex-direction:column;gap:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.12)}
         .sejin-tab-menu{background:var(--gold-lighter);padding:0;border-bottom:2px solid var(--gold-lighter);display:flex;justify-content:center;gap:0}
@@ -152,7 +152,7 @@ export default function FundPage() {
           .sejin-fund-final-cta{padding:50px 0}
           .sejin-final-cta-container{padding:0 20px}
           .sejin-final-cta-main-text{font-size:24px;word-break:keep-all}
-          .sejin-final-cta-sub-text{font-size:16px;margin-bottom:32px}
+          .sejin-final-cta-sub-text{font-size:16px;margin-bottom:32px;text-wrap:balance}
           .sejin-final-cta-button-group{flex-direction:column;gap:16px}
           .sejin-final-cta-button-group .sejin-cta-primary{width:100%;font-size:16px;padding:16px 24px}
           .sejin-final-cta-links{flex-direction:column;gap:16px}
@@ -164,13 +164,13 @@ export default function FundPage() {
         <div className="sejin-fund-hero-container">
           <div className="sejin-fund-hero-content">
             <h1 className="sejin-fund-hero-headline">
-              성장에 필요한 자금,<br/>
-              정책자금으로 해결하세요
+              중소기업 성장 자금,<br/>
+              정책자금으로 확보하세요
             </h1>
 
             <p className="sejin-fund-hero-subheadline">
               저금리, 장기 상환, 정부 보증까지<br/>
-              기업 성장을 든든하게 지원합니다
+              중소기업 자금조달을 든든히 지원합니다
             </p>
 
             <div className="sejin-fund-hero-cta-group">
@@ -206,18 +206,18 @@ export default function FundPage() {
       <section id="sejin-fund-why" className="sejin-fund-why">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">정책자금, 왜 필요한가요?</h2>
-            <p className="sejin-section-subtitle">기업 성장의 든든한 자금 파트너가 되어드립니다</p>
+            <h2 className="sejin-section-title">중소기업 정책자금, 왜 필요한가요?</h2>
+            <p className="sejin-section-subtitle">기업 성장을 위한 든든한 자금조달 파트너</p>
           </div>
 
           <div className="sejin-why-grid">
             <div className="sejin-why-card">
               <Image quality={90} src={IMAGES.whyLowRate} alt="저금리 장점" width={400} height={200} className="sejin-why-image" />
               <div className="sejin-why-content">
-                <h3 className="sejin-why-title">저금리 장점</h3>
+                <h3 className="sejin-why-title">저금리 자금조달</h3>
                 <p className="sejin-why-description">
                   시중 금리 대비 1~3% 낮은 금리로<br/>
-                  이자 부담을 크게 줄일 수 있습니다.
+                  이자 부담을 대폭 절감할 수 있습니다.
                 </p>
               </div>
             </div>
@@ -228,7 +228,7 @@ export default function FundPage() {
                 <h3 className="sejin-why-title">성장 동력 확보</h3>
                 <p className="sejin-why-description">
                   설비 투자, R&amp;D, 인력 채용 등<br/>
-                  기업 성장의 핵심 자금을 지원합니다.
+                  중소기업 성장의 핵심 자금을 확보합니다.
                 </p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function FundPage() {
               <div className="sejin-why-content">
                 <h3 className="sejin-why-title">기업 신뢰도 향상</h3>
                 <p className="sejin-why-description">
-                  정부 보증으로 대외 신뢰도 상승,<br/>
+                  정부 보증으로 기업 신뢰도 상승,<br/>
                   추가 투자 유치에도 유리합니다.
                 </p>
               </div>
@@ -257,8 +257,8 @@ export default function FundPage() {
       <section className="sejin-fund-category">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">주요 컨설팅 분야</h2>
-            <p className="sejin-section-subtitle">기업 성장 단계에 맞는 맞춤형 지원을 제공합니다</p>
+            <h2 className="sejin-section-title">정책자금 컨설팅 분야</h2>
+            <p className="sejin-section-subtitle">기업 성장 단계에 맞는 맞춤형 자금을 안내합니다</p>
           </div>
 
           <div className="sejin-tab-container">
@@ -482,8 +482,8 @@ export default function FundPage() {
       <section className="sejin-fund-process">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">자금상담 진행 절차</h2>
-            <p className="sejin-section-subtitle">체계적인 4단계 프로세스로 성공을 이끌어냅니다</p>
+            <h2 className="sejin-section-title">정책자금 상담 진행 절차</h2>
+            <p className="sejin-section-subtitle">체계적인 4단계 컨설팅으로 자금조달을 지원합니다</p>
           </div>
 
           <div className="sejin-process-timeline">
@@ -535,11 +535,11 @@ export default function FundPage() {
         <div className="sejin-final-cta-container">
           <h2 className="sejin-final-cta-main-text">
             <span className="highlight">정책자금</span>으로<br/>
-            기업의 성장을 시작하세요
+            중소기업 성장을 시작하세요
           </h2>
           <p className="sejin-final-cta-sub-text">
-            전문 컨설턴트가 대표님의 상황에 맞는<br/>
-            최적의 자금 솔루션을 제시합니다
+            전문 컨설턴트가 대표님 상황에 최적화된<br/>
+            정책자금 조달 전략을 제시합니다
           </p>
 
           <div className="sejin-final-cta-button-group">

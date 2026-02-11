@@ -59,12 +59,12 @@ export default function ContactPage() {
   }
 
   const faqs = [
-    { q: '상담 비용이 정말 무료인가요?', a: '네, 초기 상담은 100% 무료입니다. 기업 현황 분석부터 최적의 지원 전략 제시까지 비용 부담 없이 전문 컨설턴트의 상담을 받으실 수 있습니다. 상담 후 실제 신청 진행 시에만 별도 비용이 발생합니다.' },
-    { q: '상담 시간은 얼마나 걸리나요?', a: '기본 상담은 약 30분~1시간 정도 소요됩니다. 기업 현황과 필요한 지원 내용에 따라 시간이 조금씩 달라질 수 있으며, 충분한 시간을 가지고 상세히 상담해 드립니다.' },
-    { q: '어떤 서류를 준비해야 하나요?', a: '초기 상담 시에는 별도 서류 준비가 필요하지 않습니다. 기업 기본 정보(업종, 설립일, 직원 수 등)만 알고 계시면 됩니다. 필요한 서류는 상담 후 맞춤 전략 수립 단계에서 안내해 드립니다.' },
-    { q: '이미 정책자금을 받고 있는데도 상담 가능한가요?', a: '네, 상담 가능합니다. 이미 정책자금을 받고 계신 경우에도 추가 지원이 가능한 다른 정책자금이 있거나, 기업인증을 통해 더 유리한 조건으로 재신청할 수 있는 방법이 있습니다. 현재 상황을 분석하여 최적의 추가 지원 방안을 안내해 드립니다.' },
-    { q: '상담 후 계약은 필수인가요?', a: '아니요, 상담 후 계약은 전혀 강제되지 않습니다. 상담을 통해 제시된 전략과 조건을 충분히 검토하신 후, 필요하다고 판단되실 때만 진행하시면 됩니다. 부담 없이 상담받으실 수 있습니다.' },
-    { q: '소규모 기업도 상담 가능한가요?', a: '물론입니다. 1인 기업부터 중소기업까지 기업 규모와 관계없이 모두 상담 가능합니다. 각 기업의 규모와 특성에 맞는 최적의 지원 방안을 제시해 드립니다.' },
+    { q: '정책자금 상담 비용이 정말 무료인가요?', a: '네, 초기 상담은 100% 무료입니다. 기업 현황 분석부터 최적의 정책자금 전략 제시까지 비용 부담 없이 전문 컨설턴트 상담을 받으실 수 있습니다. 상담 후 실제 신청 진행 시에만 별도 비용이 발생합니다.' },
+    { q: '정책자금 상담 시간은 얼마나 걸리나요?', a: '기본 상담은 약 30분~1시간 정도 소요됩니다. 기업 현황과 필요한 자금 규모에 따라 시간이 달라질 수 있으며, 충분한 시간을 가지고 상세히 상담해 드립니다.' },
+    { q: '정책자금 신청에 어떤 서류가 필요한가요?', a: '초기 상담 시에는 별도 서류 준비가 필요하지 않습니다. 기업 기본 정보(업종, 설립일, 직원 수 등)만 알고 계시면 됩니다. 필요한 서류는 상담 후 맞춤 전략 수립 단계에서 안내해 드립니다.' },
+    { q: '이미 정책자금을 받고 있어도 추가 상담이 가능한가요?', a: '네, 상담 가능합니다. 이미 정책자금을 받고 계신 경우에도 추가로 신청 가능한 정책자금이 있거나, 기업인증을 통해 더 유리한 조건으로 재신청할 수 있습니다. 현재 상황을 분석하여 최적의 추가 자금조달 방안을 안내해 드립니다.' },
+    { q: '상담 후 컨설팅 계약은 필수인가요?', a: '아니요, 상담 후 계약은 전혀 강제되지 않습니다. 상담을 통해 제시된 자금조달 전략을 충분히 검토하신 후, 필요하다고 판단되실 때만 진행하시면 됩니다. 부담 없이 상담받으실 수 있습니다.' },
+    { q: '소규모 중소기업도 정책자금 상담이 가능한가요?', a: '물론입니다. 1인 기업부터 중소기업까지 규모와 관계없이 모두 상담 가능합니다. 각 기업의 규모와 특성에 맞는 최적의 정책자금 지원 방안을 제시해 드립니다.' },
   ]
 
   return (
@@ -225,7 +225,7 @@ export default function ContactPage() {
           .sejin-form-area{padding:28px 20px;border-radius:16px}
           .sejin-form-header{margin-bottom:24px;padding-bottom:20px;text-align:center}
           .sejin-form-title{font-size:22px}
-          .sejin-form-subtitle{font-size:14px}
+          .sejin-form-subtitle{font-size:14px;text-wrap:balance}
           .sejin-form-row{grid-template-columns:1fr;gap:16px;margin-bottom:16px}
           .sejin-form-row-half{grid-template-columns:1fr}
           .sejin-form-input,.sejin-form-select,.sejin-form-textarea{padding:12px 14px;font-size:15px}
@@ -248,13 +248,13 @@ export default function ContactPage() {
         <div className="sejin-contact-hero-container">
           <div className="sejin-contact-hero-content">
             <h1 className="sejin-contact-hero-headline">
-              무료 심사로<br/>
+              무료 기업진단으로<br/>
               시작하세요
             </h1>
 
             <p className="sejin-contact-hero-subheadline">
-              정책자금부터 인증까지<br/>
-              맞춤형 지원 전략을 무료로 확인하세요
+              정책자금부터 기업인증까지<br/>
+              맞춤형 자금조달 전략을 무료로 확인하세요
             </p>
 
             <div className="sejin-contact-hero-cta-group">
@@ -290,10 +290,10 @@ export default function ContactPage() {
       <section className="sejin-contact-process">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">상담 진행 프로세스</h2>
+            <h2 className="sejin-section-title">정책자금 상담 프로세스</h2>
             <p className="sejin-section-subtitle">
-              체계적인 4단계 프로세스로<br/>
-              최적의 지원 전략을 제시합니다
+              체계적인 4단계 컨설팅으로<br/>
+              최적의 자금조달 전략을 제시합니다
             </p>
           </div>
 
@@ -323,10 +323,10 @@ export default function ContactPage() {
                 </svg>
                 <span className="sejin-step-number-badge">02</span>
               </div>
-              <h3 className="sejin-step-card-title">현황 분석</h3>
+              <h3 className="sejin-step-card-title">기업 현황 분석</h3>
               <p className="sejin-step-card-desc">
                 전문 컨설턴트가<br/>
-                현재 상황을 면밀히 분석
+                기업 역량을 면밀히 분석
               </p>
             </div>
 
@@ -338,10 +338,10 @@ export default function ContactPage() {
                 </svg>
                 <span className="sejin-step-number-badge">03</span>
               </div>
-              <h3 className="sejin-step-card-title">맞춤 전략 수립</h3>
+              <h3 className="sejin-step-card-title">자금조달 전략 수립</h3>
               <p className="sejin-step-card-desc">
                 상황에 최적화된<br/>
-                지원 전략을 제시
+                정책자금 전략을 제시
               </p>
             </div>
 
@@ -367,7 +367,7 @@ export default function ContactPage() {
         <div className="sejin-cta-bar-container">
           <p className="sejin-cta-text">
             지금 바로 <span className="highlight">무료 심사</span>를 신청하세요<br/>
-            맞춤형 지원 전략을 확인할 수 있습니다
+            맞춤형 정책자금 전략을 확인할 수 있습니다
           </p>
         </div>
       </section>
@@ -376,7 +376,7 @@ export default function ContactPage() {
       <section className="sejin-contact-faq">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">자주 묻는 질문</h2>
+            <h2 className="sejin-section-title">정책자금 상담 자주 묻는 질문</h2>
             <p className="sejin-section-subtitle">
               상담 전 궁금하신 사항을<br className="mobile-br"/>
               빠르게 확인하세요
@@ -417,8 +417,8 @@ export default function ContactPage() {
                 <span className="highlight">무료 상담 신청</span>
               </h2>
               <p className="sejin-info-desc">
-                세진컨설팅의 전문 컨설턴트가<br/>
-                맞춤형 자금 조달 방안을<br/>
+                세진컨설팅 전문 컨설턴트가<br/>
+                맞춤형 정책자금 조달 방안을<br/>
                 제시해드립니다.
               </p>
 

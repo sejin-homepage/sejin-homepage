@@ -88,25 +88,37 @@ function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
+function hasValue(s: string | undefined): boolean {
+  return !!s && s !== '-' && s.trim() !== ''
+}
+
 function buildTelegramMessage(data: ConsultData, now: string): string {
   let msg = '🔔 <b>SEJIN 신규 상담 접수</b>\n\n'
-  msg += '👤 <b>고객정보</b>\n'
-  msg += '├ 기업명: <b>' + escapeHtml(data.company) + '</b>\n'
-  msg += '├ 사업자번호: ' + escapeHtml(data.bizno) + '\n'
-  msg += '├ 대표자명: <b>' + escapeHtml(data.name) + '</b>\n'
-  msg += '├ 연락처: <code>' + escapeHtml(data.phone) + '</code>\n'
-  msg += '├ 이메일: ' + escapeHtml(data.email) + '\n'
-  msg += '├ 업종: ' + escapeHtml(data.industry || '-') + '\n'
-  msg += '└ 설립연도: ' + escapeHtml(data.founded || '-') + '\n\n'
-  msg += '💰 <b>자금정보</b>\n'
-  msg += '├ 통화가능: <b>' + escapeHtml(data.consultTime) + '</b>\n'
-  msg += '├ 규모: ' + escapeHtml(data.amount || '-') + '\n'
-  msg += '└ 종류: ' + escapeHtml(data.fundType || '-') + '\n'
-  if (data.message && data.message !== '-') {
+
+  // 고객정보 - 있는 항목만
+  const info: string[] = []
+  if (hasValue(data.company)) info.push('기업명: <b>' + escapeHtml(data.company) + '</b>')
+  if (hasValue(data.bizno)) info.push('사업자번호: ' + escapeHtml(data.bizno))
+  info.push('이름: <b>' + escapeHtml(data.name) + '</b>')
+  info.push('연락처: <code>' + escapeHtml(data.phone) + '</code>')
+  if (hasValue(data.email)) info.push('이메일: ' + escapeHtml(data.email))
+  if (hasValue(data.industry)) info.push('업종: ' + escapeHtml(data.industry))
+  if (hasValue(data.founded)) info.push('설립연도: ' + escapeHtml(data.founded))
+  info.push('통화가능: <b>' + escapeHtml(data.consultTime) + '</b>')
+  if (hasValue(data.amount)) info.push('자금규모: ' + escapeHtml(data.amount))
+  if (hasValue(data.fundType)) info.push('자금종류: ' + escapeHtml(data.fundType))
+
+  for (let i = 0; i < info.length; i++) {
+    const prefix = i === info.length - 1 ? '└' : '├'
+    msg += prefix + ' ' + info[i] + '\n'
+  }
+
+  if (hasValue(data.message) && data.message !== '빠른 상담 요청 (플로팅)') {
     msg += '\n💬 <b>문의</b>\n' + escapeHtml(data.message) + '\n'
   }
+
   msg += '\n📅 ' + now
-  msg += '\n\n📊 <a href="https://airtable.com/appZPwyTU6EfGdjC6/tbllr4nPVBxNUf3Wz">Airtable에서 보기</a>'
+  msg += '\n\n📊 <a href="https://sejin.ai.kr/dashboard/leads">리드 관리 바로가기</a>'
   return msg
 }
 

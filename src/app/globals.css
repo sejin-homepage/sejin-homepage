@@ -1590,10 +1590,12 @@ body {
 
   .sejin-section-title {
     font-size: 24px;
+    text-wrap: balance;
   }
 
   .sejin-section-subtitle {
     font-size: 14px;
+    text-wrap: balance;
   }
 
   /* Hero Section 모바일 */
@@ -1619,9 +1621,10 @@ body {
   }
 
   .sejin-hero-headline {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 16px;
     line-height: 1.35;
+    text-wrap: balance;
   }
 
   .sejin-hero-subheadline {
@@ -1927,6 +1930,7 @@ body {
   .sejin-cta-text {
     font-size: 22px;
     line-height: 1.7;
+    text-wrap: balance;
   }
 
   .sejin-cta-text .highlight {
@@ -2062,6 +2066,7 @@ body {
     font-size: 11px;
     margin-top: 10px;
     line-height: 1.4;
+    text-wrap: balance;
   }
 
   .sejin-interest-cta .sejin-disclaimer br {
@@ -2283,6 +2288,7 @@ body {
   .sejin-expert-greeting {
     font-size: 14px;
     margin-bottom: 10px;
+    white-space: nowrap;
   }
 
   .sejin-expert-description {

@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     const data: ConsultData = await request.json()
 
     // 필수 필드 검증
-    if (!data.company || !data.name || !data.phone || !data.email || !data.consultTime) {
+    if (!data.name || !data.phone || !data.consultTime) {
       return NextResponse.json(
         { success: false, error: '필수 항목을 입력해주세요.' },
         { status: 400 }

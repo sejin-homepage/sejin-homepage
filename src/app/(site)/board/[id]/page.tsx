@@ -1,4 +1,6 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import { articleSchema, breadcrumbSchema } from '@/lib/seo/schemas'
 
 interface BoardPost {
   id: number
@@ -25,6 +27,46 @@ async function getPost(id: string): Promise<BoardPost | null> {
   }
 }
 
+const SITE_URL = 'https://sejin.ai.kr'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}): Promise<Metadata> {
+  const { id } = await params
+  const post = await getPost(id)
+
+  if (!post) {
+    return {
+      title: '게시글을 찾을 수 없습니다 | 세진컨설팅',
+      description: '요청하신 성공사례 게시글을 찾을 수 없습니다.',
+    }
+  }
+
+  const title = `${post.title} | 성공사례 - 세진컨설팅`
+  const description = `${post.company} ${post.category} 성공사례. ${post.amount ? `조달 금액: ${post.amount}.` : ''} 세진컨설팅의 정책자금 컨설팅 실적을 확인하세요.`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/board/${id}`,
+      siteName: '세진컨설팅',
+      locale: 'ko_KR',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: { canonical: `${SITE_URL}/board/${id}` },
+  }
+}
+
 export default async function BoardPostPage({
   params,
 }: {
@@ -35,6 +77,28 @@ export default async function BoardPostPage({
 
   return (
     <>
+      {post && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              articleSchema({
+                title: post.title,
+                description: `${post.company} ${post.category} 성공사례`,
+                url: `${SITE_URL}/board/${id}`,
+                datePublished: post.date,
+                image: post.thumbnail,
+              }),
+              breadcrumbSchema([
+                { name: '홈', url: SITE_URL },
+                { name: '성공사례', url: `${SITE_URL}/success` },
+                { name: post.title, url: `${SITE_URL}/board/${id}` },
+              ]),
+            ]),
+          }}
+        />
+      )}
+
       <style>{`
         .sejin-board-detail{max-width:900px;margin:0 auto;padding:60px 20px}
         .sejin-board-back{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--gold);text-decoration:none;margin-bottom:32px;transition:all .3s ease}

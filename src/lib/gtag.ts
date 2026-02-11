@@ -1,4 +1,4 @@
-export const GA_MEASUREMENT_ID = 'G-SFN8R0VMMR'
+export const GA_MEASUREMENT_ID = 'G-TCC437319B'
 
 type GtagEvent = {
   action: string

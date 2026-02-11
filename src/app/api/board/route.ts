@@ -4,32 +4,32 @@ import { deleteR2Image } from '@/lib/r2'
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN
 const AIRTABLE_BASE_ID = 'appZPwyTU6EfGdjC6'
-const BOARD_TABLE_ID = 'tbl70mSCu4sicfZa5'
+const BOARD_TABLE_ID = 'tbleNuxlGV59U47mZ'
 
 // 필드 ID 매핑 (Airtable 인코딩 이슈 방지)
 const FIELD_IDS: Record<string, string> = {
-  제목: 'fldZ7fwbfxuSB8h1e',
-  요약: 'fldFM2SrXA57YVpDh',
-  내용: 'fldizthhl55jka0iX',
-  카테고리: 'fldONH3XMUJsVB8UO',
-  금액: 'fldzGiDfPJcb2qmnF',
-  작성일: 'fldiiS0vSWHqMVTNw',
-  공개여부: 'fldM7DjMJMKLrCnV8',
-  썸네일: 'fldTdp4fSsnGkSl68',
+  제목: 'fldwrF2rOBTv4hZRv',
+  요약: 'fldJGD9b86t9R7Ms0',
+  내용: 'fldo368fKoMJZctIi',
+  카테고리: 'fldRQhAJL3ReMVA1n',
+  금액: 'fldqnLdpI7yZE0QzV',
+  작성일: 'fld4sk10tXdzZjQWh',
+  공개여부: 'fldokDOixWld4QjgG',
+  썸네일: 'fldJkEamGcm3EVtz2',
 }
 
 // 카테고리 Select Option ID → 이름
 const CATEGORY_NAMES: Record<string, string> = {
-  selM4ZDRvm8PMBpBV: '성공사례',
-  selvmPChs5uR3tLAQ: '정책자금',
-  selfHlxsrswu3QAzO: '인증지원',
+  selK3D1RaEZYTeZcn: '성공사례',
+  selmMKlU4oehoqy5X: '정책자금',
+  selJbVQrsVVXLQ1ma: '인증지원',
 }
 
 // 카테고리 이름 → Select Option ID
 const CATEGORY_IDS: Record<string, string> = {
-  성공사례: 'selM4ZDRvm8PMBpBV',
-  정책자금: 'selvmPChs5uR3tLAQ',
-  인증지원: 'selfHlxsrswu3QAzO',
+  성공사례: 'selK3D1RaEZYTeZcn',
+  정책자금: 'selmMKlU4oehoqy5X',
+  인증지원: 'selJbVQrsVVXLQ1ma',
 }
 
 interface AirtableField {

@@ -43,7 +43,7 @@ export default function SuccessPage() {
         .sejin-success-board-header{text-align:center;margin-bottom:48px}
         .sejin-success-board-title{font-size:36px;font-weight:700;color:var(--sejin-text-primary);margin-bottom:12px}
         .sejin-success-board-title .highlight{color:var(--sejin-primary)}
-        .sejin-success-board-subtitle{font-size:16px;color:#666}
+        .sejin-success-board-subtitle{font-size:16px;color:#666;text-wrap:balance}
         .sejin-success-board-list{display:flex;flex-direction:column;gap:16px}
         .sejin-success-board-item{display:grid;grid-template-columns:120px 100px 1fr 120px 140px;gap:20px;align-items:center;padding:24px 28px;background:#f9fafb;border-radius:12px;transition:all .2s ease;border:1px solid transparent}
         .sejin-success-board-item:hover{background:#fff;border-color:var(--sejin-primary-pale);box-shadow:0 4px 12px rgba(212,165,116,0.1);cursor:pointer}
@@ -97,7 +97,7 @@ export default function SuccessPage() {
           .sejin-aftercare-visual{order:-1}
           .sejin-aftercare-visual img{max-width:100%;aspect-ratio:4/3;border-radius:12px}
           .sejin-success-cta-bar{padding:32px 20px}
-          .sejin-success-cta-text{font-size:18px;line-height:1.7}
+          .sejin-success-cta-text{font-size:18px;line-height:1.7;text-wrap:balance}
           .sejin-success-board{padding:50px 16px}
           .sejin-success-board-title{font-size:26px}
           .sejin-success-board-item{display:flex;flex-direction:column;gap:12px;padding:16px}
@@ -109,7 +109,7 @@ export default function SuccessPage() {
           .sejin-success-board-category{order:2;align-self:flex-start}
           .sejin-success-board-amount{order:3;text-align:left;font-size:17px}
           .sejin-final-cta{padding:50px 20px}
-          .sejin-final-cta-title{font-size:24px;word-break:keep-all}
+          .sejin-final-cta-title{font-size:24px;word-break:keep-all;text-wrap:balance}
           .sejin-final-cta-subtitle{font-size:15px;margin-bottom:32px}
           .sejin-final-cta-buttons{flex-direction:column;gap:16px}
           .sejin-final-cta-button{width:100%;font-size:16px;padding:16px 24px}
@@ -122,13 +122,13 @@ export default function SuccessPage() {
         <div className="sejin-success-hero-container">
           <div className="sejin-success-hero-content">
             <h1 className="sejin-success-hero-headline">
-              실제 지원 사례로<br/>
+              정책자금 성공사례를<br/>
               확인하세요
             </h1>
 
             <p className="sejin-success-hero-subheadline">
-              정책자금부터 인증까지<br/>
-              세진컨설팅과 함께한 실제 지원 스토리
+              정책자금부터 기업인증까지<br/>
+              세진컨설팅과 함께한 자금조달 스토리
             </p>
 
             <div className="sejin-success-hero-cta-group">
@@ -171,7 +171,7 @@ export default function SuccessPage() {
 
             <p className="sejin-aftercare-subtitle">
               지속적인 사후관리로<br/>
-              추가 자금까지 책임집니다
+              추가 정책자금까지 책임집니다
             </p>
 
             <div className="sejin-timeline">
@@ -183,10 +183,10 @@ export default function SuccessPage() {
                 </div>
                 <div>
                   <div className="sejin-timeline-step">Step 1</div>
-                  <h3 className="sejin-timeline-title">1차 자금 확보 성공</h3>
+                  <h3 className="sejin-timeline-title">1차 정책자금 확보</h3>
                   <p className="sejin-timeline-description">
                     정책자금 또는 인증 취득으로<br/>
-                    첫 번째 목표 달성
+                    첫 번째 자금조달 달성
                   </p>
                 </div>
               </div>
@@ -219,10 +219,10 @@ export default function SuccessPage() {
                 </div>
                 <div>
                   <div className="sejin-timeline-step">Step 3</div>
-                  <h3 className="sejin-timeline-title">추가 지원 시기 알림</h3>
+                  <h3 className="sejin-timeline-title">추가 정책자금 시기 알림</h3>
                   <p className="sejin-timeline-description">
-                    신청 가능한 정책자금 및<br/>
-                    인증 시기를 미리 안내
+                    신청 가능한 정부지원사업 및<br/>
+                    인증 시기를 사전 안내
                   </p>
                 </div>
               </div>
@@ -236,10 +236,10 @@ export default function SuccessPage() {
                 </div>
                 <div>
                   <div className="sejin-timeline-step">Step 4</div>
-                  <h3 className="sejin-timeline-title">2차 자금 확보 지원</h3>
+                  <h3 className="sejin-timeline-title">2차 정책자금 조달 지원</h3>
                   <p className="sejin-timeline-description">
                     다른 정책자금과 조합하여<br/>
-                    추가 자금 확보 성공
+                    추가 자금조달 성공
                   </p>
                 </div>
               </div>
@@ -269,7 +269,7 @@ export default function SuccessPage() {
       {/* 3. CTA Bar */}
       <section className="sejin-success-cta-bar">
         <p className="sejin-success-cta-text">
-          체계적인 <span className="highlight">사후관리</span>로<br/>
+          체계적인 <span className="highlight">사후 컨설팅</span>으로<br/>
           자금상환까지 <span className="highlight">끝까지 함께</span>합니다
         </p>
       </section>
@@ -281,7 +281,7 @@ export default function SuccessPage() {
             <h2 className="sejin-success-board-title">
               <span className="highlight">성공사례</span> 게시판
             </h2>
-            <p className="sejin-success-board-subtitle">세진컨설팅과 함께한 기업들의 실제 지원 스토리</p>
+            <p className="sejin-success-board-subtitle">세진컨설팅과 함께한 중소기업의 자금조달 스토리</p>
           </div>
 
           <div className="sejin-success-board-list">
@@ -299,7 +299,7 @@ export default function SuccessPage() {
           당신의 기업입니다
         </h2>
         <p className="sejin-final-cta-subtitle">
-          무료 심사로 맞춤형 지원 전략을<br/>
+          무료 심사로 맞춤형 자금조달 전략을<br/>
           먼저 확인하고 시작하세요
         </p>
 

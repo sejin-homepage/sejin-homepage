@@ -267,7 +267,7 @@ export default function CertificationPage() {
           .sejin-cert-description,.sejin-cert-benefits{display:none}
           .sejin-cert-category-cta{margin-top:24px}
           .sejin-cert-cta-bar{padding:32px 20px}
-          .sejin-cert-cta-text{font-size:22px;line-height:1.7}
+          .sejin-cert-cta-text{font-size:22px;line-height:1.7;text-wrap:balance}
           .sejin-cert-benefit-section{padding:48px 0}
           .sejin-benefit-tabs{gap:8px;padding:0 8px}
           .sejin-benefit-tab-btn{font-size:13px;padding:10px 12px;flex:1;min-width:calc(50% - 4px);max-width:none;width:auto}
@@ -294,7 +294,7 @@ export default function CertificationPage() {
           .sejin-ready-cta{margin-top:28px;padding-top:20px}
           .sejin-ready-cta .sejin-cta-primary{width:100%;justify-content:center}
           .sejin-cert-final-cta{padding:48px 20px}
-          .sejin-cert-final-cta-text{font-size:22px;word-break:keep-all}
+          .sejin-cert-final-cta-text{font-size:22px;word-break:keep-all;text-wrap:balance}
           .sejin-cert-final-cta-sub{font-size:14px;margin-bottom:28px}
           .sejin-cert-final-cta-buttons{flex-direction:column;gap:12px}
           .sejin-cert-final-cta-buttons .sejin-cta-primary{width:100%;justify-content:center}
@@ -307,13 +307,13 @@ export default function CertificationPage() {
         <div className="sejin-cert-hero-container">
           <div className="sejin-cert-hero-content">
             <h1 className="sejin-cert-hero-headline">
-              인증 하나로<br/>
-              혜택은 여러 개
+              기업인증 하나로<br/>
+              혜택은 여러 가지
             </h1>
 
             <p className="sejin-cert-hero-subheadline">
               세제 감면, 정책자금 우대, 입찰 가점까지<br/>
-              기업인증으로 성장의 기회를 넓히세요
+              벤처·이노비즈 인증으로 성장 기회를 넓히세요
             </p>
 
             <div className="sejin-cert-hero-cta-group">
@@ -334,8 +334,8 @@ export default function CertificationPage() {
             </div>
 
             <p className="sejin-cert-hero-disclaimer">
-              기업 현황에 맞는 최적의 인증을 추천합니다.<br/>
-              인증 취득을 위한 맞춤 컨설팅을 제공합니다.
+              기업 현황에 맞는 최적의 인증을 안내합니다.<br/>
+              인증 취득을 위한 전문 컨설팅을 제공합니다.
             </p>
           </div>
 
@@ -349,8 +349,8 @@ export default function CertificationPage() {
       <section className="sejin-cert-category">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">세진컨설팅이 지원하는 주요 기업인증</h2>
-            <p className="sejin-section-subtitle">귀사에 맞는 최적의 인증을 찾아드립니다</p>
+            <h2 className="sejin-section-title">세진컨설팅이 지원하는 중소기업 인증</h2>
+            <p className="sejin-section-subtitle">귀사에 맞는 최적의 기업인증을 찾아드립니다</p>
           </div>
 
           <div className="sejin-cert-grid">
@@ -386,7 +386,7 @@ export default function CertificationPage() {
       {/* CTA Bar */}
       <section className="sejin-cert-cta-bar">
         <p className="sejin-cert-cta-text">
-          우리 기업에 필요한 <span className="highlight">인증</span>, 지금 바로 <span className="highlight">확인</span>하세요
+          우리 기업에 맞는 <span className="highlight">인증</span>, 지금 무료로 <span className="highlight">진단</span>하세요
         </p>
       </section>
 
@@ -394,8 +394,8 @@ export default function CertificationPage() {
       <section className="sejin-cert-benefit-section">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">기업인증으로 누리는 실질적 혜택</h2>
-            <p className="sejin-section-subtitle">인증 취득 후 받을 수 있는 다양한 지원과 혜택 확인하기</p>
+            <h2 className="sejin-section-title">벤처·이노비즈 인증의 실질적 혜택</h2>
+            <p className="sejin-section-subtitle">인증 취득 후 받을 수 있는 세제감면·자금우대 혜택</p>
           </div>
 
           <div className="sejin-benefit-tabs">
@@ -440,8 +440,8 @@ export default function CertificationPage() {
       <section className="sejin-cert-ready">
         <div className="sejin-section-container">
           <div className="sejin-section-header">
-            <h2 className="sejin-section-title">인증별 요건 및 준비사항</h2>
-            <p className="sejin-section-subtitle">우리 기업이 충족해야 할 인증 조건을 확인하세요</p>
+            <h2 className="sejin-section-title">기업인증별 요건 및 준비사항</h2>
+            <p className="sejin-section-subtitle">우리 기업이 갖춰야 할 인증 조건을 확인하세요</p>
           </div>
 
           <div className="sejin-ready-tabs">
@@ -500,11 +500,11 @@ export default function CertificationPage() {
       <section className="sejin-cert-final-cta">
         <div className="sejin-section-container">
           <h2 className="sejin-cert-final-cta-text">
-            우리 기업에 필요한 인증,<br/>
-            <span className="highlight">지금 바로 확인하세요</span>
+            우리 기업에 맞는 인증,<br/>
+            <span className="highlight">무료 진단으로 확인하세요</span>
           </h2>
           <p className="sejin-cert-final-cta-sub">
-            무료 인증 심사로 최적의 인증을<br/>먼저 파악하고 시작하세요
+            무료 인증 진단으로 최적의 인증을<br/>먼저 파악하고 시작하세요
           </p>
 
           <div className="sejin-cert-final-cta-buttons">
