@@ -1,6 +1,6 @@
 /** 세진컨설팅 이미지 URL 상수 */
 
-const R2 = 'https://pub-eabc7e0bf72d4094918f00bb8c007fea.r2.dev/sejin/images'
+const R2 = 'https://pub-8b474ea0dceb4600b835f34636611442.r2.dev/sejin/images'
 const IMG = '/images/sejin' // 고품질 로컬 이미지
 
 export const IMAGES = {
