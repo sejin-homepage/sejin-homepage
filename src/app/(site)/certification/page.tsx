@@ -317,7 +317,7 @@ export default function CertificationPage() {
             </p>
 
             <div className="sejin-cert-hero-cta-group">
-              <Link href="/contact" className="sejin-cta-primary">
+              <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 11l3 3L22 4"/>
                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -372,7 +372,7 @@ export default function CertificationPage() {
           </div>
 
           <div className="sejin-cert-category-cta">
-            <Link href="/contact" className="sejin-cta-primary">
+            <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 11l3 3L22 4"/>
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -482,7 +482,7 @@ export default function CertificationPage() {
                 </div>
 
                 <div className="sejin-ready-cta">
-                  <Link href="/contact" className="sejin-cta-primary">
+                  <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M9 11l3 3L22 4"/>
                       <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -508,7 +508,7 @@ export default function CertificationPage() {
           </p>
 
           <div className="sejin-cert-final-cta-buttons">
-            <Link href="/contact" className="sejin-cta-primary">
+            <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 11l3 3L22 4"/>
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>

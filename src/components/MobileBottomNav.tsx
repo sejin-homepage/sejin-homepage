@@ -42,7 +42,7 @@ const navItems = [
     ),
   },
   {
-    href: '/contact',
+    href: '/contact#sejin-contact-form',
     label: '무료심사',
     icon: (
       <svg viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export default function MobileBottomNav() {
   }
 
   const isActive = (href: string) => {
-    return pathname.startsWith(href)
+    return pathname.startsWith(href.split('#')[0])
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {

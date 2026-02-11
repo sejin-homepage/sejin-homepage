@@ -9,7 +9,7 @@ const navItems = [
   { href: '/fund', label: '정책자금' },
   { href: '/certification', label: '인증지원' },
   { href: '/success', label: '성공사례' },
-  { href: '/contact', label: '무료심사' },
+  { href: '/contact#sejin-contact-form', label: '무료심사' },
 ]
 
 export default function Header() {
@@ -52,8 +52,9 @@ export default function Header() {
   }
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/'
-    return pathname.startsWith(href)
+    const path = href.split('#')[0]
+    if (path === '/') return pathname === '/'
+    return pathname.startsWith(path)
   }
 
   return (

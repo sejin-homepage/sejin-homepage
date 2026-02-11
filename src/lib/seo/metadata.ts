@@ -28,6 +28,7 @@ export const pageMetadata: Record<string, Metadata> = {
       siteName: SITE_NAME,
       locale: 'ko_KR',
       type: 'website',
+      images: [{ url: 'https://sejin.ai.kr/images/og-image.png', width: 1200, height: 630, alt: '세진컨설팅 - 정부정책자금 자금확보 전문가' }],
     },
     twitter: {
       card: 'summary_large_image',

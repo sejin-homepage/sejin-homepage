@@ -136,10 +136,7 @@ export async function POST(request: NextRequest) {
     if (요약) fields[FIELD_IDS.요약] = 요약
     if (내용) fields[FIELD_IDS.내용] = 내용
     if (카테고리) {
-      const categoryId = CATEGORY_IDS[카테고리]
-      if (categoryId) {
-        fields[FIELD_IDS.카테고리] = { id: categoryId }
-      }
+      fields[FIELD_IDS.카테고리] = 카테고리
     }
     if (금액) fields[FIELD_IDS.금액] = 금액
     if (공개여부 !== undefined) fields[FIELD_IDS.공개여부] = 공개여부
@@ -205,10 +202,7 @@ export async function PUT(request: NextRequest) {
     if (요약 !== undefined) fields[FIELD_IDS.요약] = 요약
     if (내용 !== undefined) fields[FIELD_IDS.내용] = 내용
     if (카테고리 !== undefined) {
-      const categoryId = CATEGORY_IDS[카테고리]
-      if (categoryId) {
-        fields[FIELD_IDS.카테고리] = { id: categoryId }
-      }
+      fields[FIELD_IDS.카테고리] = 카테고리
     }
     if (금액 !== undefined) fields[FIELD_IDS.금액] = 금액
     if (공개여부 !== undefined) fields[FIELD_IDS.공개여부] = 공개여부

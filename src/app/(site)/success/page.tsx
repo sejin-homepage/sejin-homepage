@@ -2,7 +2,42 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { IMAGES } from '@/lib/images'
 
-export default function SuccessPage() {
+interface BoardPost {
+  id: string
+  제목: string
+  요약: string
+  카테고리: string
+  금액: string
+  작성일: string
+  공개여부: boolean
+  썸네일: string
+}
+
+async function getPosts(): Promise<BoardPost[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+    const res = await fetch(`${baseUrl}/api/board`, {
+      next: { tags: ['board'], revalidate: 60 },
+    })
+    if (!res.ok) return []
+    const data = await res.json()
+    if (!data.success || !data.posts) return []
+    return data.posts
+      .filter((p: BoardPost) => p.공개여부 !== false)
+      .sort((a: BoardPost, b: BoardPost) => new Date(b.작성일).getTime() - new Date(a.작성일).getTime())
+  } catch {
+    return []
+  }
+}
+
+function formatDate(dateStr: string) {
+  if (!dateStr) return '-'
+  const d = new Date(dateStr)
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`
+}
+
+export default async function SuccessPage() {
+  const posts = await getPosts()
   return (
     <>
       <style>{`
@@ -45,7 +80,7 @@ export default function SuccessPage() {
         .sejin-success-board-title .highlight{color:var(--sejin-primary)}
         .sejin-success-board-subtitle{font-size:16px;color:#666;text-wrap:balance}
         .sejin-success-board-list{display:flex;flex-direction:column;gap:16px}
-        .sejin-success-board-item{display:grid;grid-template-columns:120px 100px 1fr 120px 140px;gap:20px;align-items:center;padding:24px 28px;background:#f9fafb;border-radius:12px;transition:all .2s ease;border:1px solid transparent}
+        .sejin-success-board-item{display:grid;grid-template-columns:120px 100px 1fr 120px 140px;gap:20px;align-items:center;padding:24px 28px;background:#f9fafb;border-radius:12px;transition:all .2s ease;border:1px solid transparent;text-decoration:none;color:inherit}
         .sejin-success-board-item:hover{background:#fff;border-color:var(--sejin-primary-pale);box-shadow:0 4px 12px rgba(212,165,116,0.1);cursor:pointer}
         .sejin-success-board-thumb{width:120px;height:80px;border-radius:8px;background:linear-gradient(135deg,var(--sejin-primary-pale) 0%,var(--sejin-primary-light) 100%);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--sejin-primary-dark);font-weight:600;overflow:hidden;flex-shrink:0}
         .sejin-success-board-date{font-size:14px;color:#999;font-weight:500}
@@ -132,7 +167,7 @@ export default function SuccessPage() {
             </p>
 
             <div className="sejin-success-hero-cta-group">
-              <Link href="/contact" className="sejin-cta-primary">
+              <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 11l3 3L22 4"/>
                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -246,7 +281,7 @@ export default function SuccessPage() {
             </div>
 
             <div className="sejin-aftercare-cta">
-              <Link href="/contact" className="sejin-cta-primary">
+              <Link href="/contact#sejin-contact-form" className="sejin-cta-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 11l3 3L22 4"/>
                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -285,9 +320,31 @@ export default function SuccessPage() {
           </div>
 
           <div className="sejin-success-board-list">
-            <div className="sejin-success-board-empty">
-              <p>아직 등록된 성공사례가 없습니다.</p>
-            </div>
+            {posts.length > 0 ? (
+              posts.map((post) => (
+                <Link key={post.id} href={`/board/${post.id}`} className="sejin-success-board-item">
+                  <div className="sejin-success-board-thumb">
+                    {post.썸네일 ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={post.썸네일} alt={post.제목} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      '세진'
+                    )}
+                  </div>
+                  <span className="sejin-success-board-date">{formatDate(post.작성일)}</span>
+                  <div className="sejin-success-board-content">
+                    <h3 className="sejin-success-board-company">{post.제목}</h3>
+                    {post.요약 && <p className="sejin-success-board-desc">{post.요약}</p>}
+                  </div>
+                  <span className="sejin-success-board-category">{post.카테고리 || '정책자금'}</span>
+                  {post.금액 && <span className="sejin-success-board-amount">{post.금액}</span>}
+                </Link>
+              ))
+            ) : (
+              <div className="sejin-success-board-empty">
+                <p>아직 등록된 성공사례가 없습니다.</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -304,7 +361,7 @@ export default function SuccessPage() {
         </p>
 
         <div className="sejin-final-cta-buttons">
-          <Link href="/contact" className="sejin-final-cta-button">
+          <Link href="/contact#sejin-contact-form" className="sejin-final-cta-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 11l3 3L22 4"/>
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>

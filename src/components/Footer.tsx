@@ -58,7 +58,7 @@ export default function Footer() {
               <li><Link href="/fund">정책자금</Link></li>
               <li><Link href="/certification">인증지원</Link></li>
               <li><Link href="/success">성공사례</Link></li>
-              <li><Link href="/contact">무료심사</Link></li>
+              <li><Link href="/contact#sejin-contact-form">무료심사</Link></li>
             </ul>
           </div>
         </div>
