@@ -14,12 +14,12 @@ export default function FundPage() {
         .sejin-fund-hero{background:linear-gradient(135deg,#FFFFFF 0%,var(--navy) 100%);padding:0;margin:0;min-height:auto;display:flex;align-items:flex-start}
         .sejin-fund-hero-container{max-width:1200px;margin:0 auto;padding:60px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;width:100%}
         .sejin-fund-hero-content{max-width:600px}
-        .sejin-fund-hero-headline{font-size:48px;font-weight:700;color:var(--body-text);line-height:1.25;margin-bottom:20px;letter-spacing:-0.02em}
-        .sejin-fund-hero-subheadline{font-size:18px;font-weight:400;color:#666;line-height:1.7;margin-bottom:36px}
-        .sejin-fund-hero-cta-group{display:flex;gap:16px;flex-wrap:wrap}
-        .sejin-fund-hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+        .sejin-fund-hero-headline{font-size:48px;font-weight:700;color:var(--body-text);line-height:1.25;margin-bottom:20px;letter-spacing:-0.02em;animation:fadeInUp .6s ease-out .1s both}
+        .sejin-fund-hero-subheadline{font-size:18px;font-weight:400;color:#666;line-height:1.7;margin-bottom:36px;animation:fadeInUp .6s ease-out .2s both}
+        .sejin-fund-hero-cta-group{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .6s ease-out .3s both}
+        .sejin-fund-hero-visual{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeIn .8s ease-out .5s both}
         .sejin-fund-hero-visual img{width:100%;max-width:500px;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:16px;box-shadow:0 24px 48px rgba(212,165,116,0.15)}
-        .sejin-fund-hero-disclaimer{font-size:13px;color:#999;line-height:1.6;margin-top:20px}
+        .sejin-fund-hero-disclaimer{font-size:13px;color:#999;line-height:1.6;margin-top:20px;animation:fadeInUp .6s ease-out .4s both}
         .sejin-fund-why{background:var(--navy);padding:80px 0}
         .sejin-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
         .sejin-why-card{background:#fff;border:1px solid var(--gold-lighter);border-radius:12px;padding:0;text-align:center;transition:all .3s ease;overflow:hidden}
@@ -196,7 +196,7 @@ export default function FundPage() {
           </div>
 
           <div className="sejin-fund-hero-visual">
-            <Image src={IMAGES.fundHero} alt="세진컨설팅 - 정책자금 컨설팅" width={500} height={500} priority />
+            <Image unoptimized src={IMAGES.fundHero} alt="세진컨설팅 - 정책자금 컨설팅" width={500} height={500} priority />
           </div>
         </div>
       </section>
@@ -211,7 +211,7 @@ export default function FundPage() {
 
           <div className="sejin-why-grid">
             <div className="sejin-why-card">
-              <Image src={IMAGES.whyLowRate} alt="저금리 장점" width={400} height={200} className="sejin-why-image" />
+              <Image quality={90} src={IMAGES.whyLowRate} alt="저금리 장점" width={400} height={200} className="sejin-why-image" />
               <div className="sejin-why-content">
                 <h3 className="sejin-why-title">저금리 장점</h3>
                 <p className="sejin-why-description">
@@ -222,7 +222,7 @@ export default function FundPage() {
             </div>
 
             <div className="sejin-why-card">
-              <Image src={IMAGES.whyGrowth} alt="성장 동력 확보" width={400} height={200} className="sejin-why-image" />
+              <Image quality={90} src={IMAGES.whyGrowth} alt="성장 동력 확보" width={400} height={200} className="sejin-why-image" />
               <div className="sejin-why-content">
                 <h3 className="sejin-why-title">성장 동력 확보</h3>
                 <p className="sejin-why-description">
@@ -233,7 +233,7 @@ export default function FundPage() {
             </div>
 
             <div className="sejin-why-card">
-              <Image src={IMAGES.whyTrust} alt="기업 신뢰도 향상" width={400} height={200} className="sejin-why-image" />
+              <Image quality={90} src={IMAGES.whyTrust} alt="기업 신뢰도 향상" width={400} height={200} className="sejin-why-image" />
               <div className="sejin-why-content">
                 <h3 className="sejin-why-title">기업 신뢰도 향상</h3>
                 <p className="sejin-why-description">
@@ -279,13 +279,13 @@ export default function FundPage() {
 
             {/* 탭 1: 정책자금 컨설팅 */}
             <div className={`sejin-tab-content ${activeTab === 'fund' ? 'active' : ''}`}>
-              <Image src={IMAGES.categoryFund} alt="정책자금 컨설팅" width={1200} height={525} className="sejin-tab-header-image" />
+              <Image quality={90} src={IMAGES.categoryFund} alt="정책자금 컨설팅" width={1200} height={525} className="sejin-tab-header-image" />
 
               <div className="sejin-consulting-items-container">
                 {/* 1. 운전자금 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemOperation} alt="운전자금" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemOperation} alt="운전자금" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">
@@ -324,7 +324,7 @@ export default function FundPage() {
                 {/* 2. 시설자금 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemFacility} alt="시설자금" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemFacility} alt="시설자금" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">
@@ -363,7 +363,7 @@ export default function FundPage() {
                 {/* 3. 기술개발(R&D) 자금 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemRnd} alt="R&D 자금" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemRnd} alt="R&D 자금" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">
@@ -403,13 +403,13 @@ export default function FundPage() {
 
             {/* 탭 2: 경영 컨설팅 */}
             <div className={`sejin-tab-content ${activeTab === 'consulting' ? 'active' : ''}`}>
-              <Image src={IMAGES.categoryConsulting} alt="경영 컨설팅" width={1200} height={525} className="sejin-tab-header-image" />
+              <Image quality={90} src={IMAGES.categoryConsulting} alt="경영 컨설팅" width={1200} height={525} className="sejin-tab-header-image" />
 
               <div className="sejin-consulting-items-container">
                 {/* 1. 재무구조 개선 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemFinance} alt="재무구조 개선" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemFinance} alt="재무구조 개선" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">
@@ -431,7 +431,7 @@ export default function FundPage() {
                 {/* 2. 원가절감 전략 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemCost} alt="원가절감 전략" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemCost} alt="원가절감 전략" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">
@@ -453,7 +453,7 @@ export default function FundPage() {
                 {/* 3. 사업계획서 작성 코칭 */}
                 <div className="sejin-consulting-item">
                   <div className="sejin-item-icon">
-                    <Image src={IMAGES.itemPlan} alt="사업계획서 작성 코칭" width={280} height={280} />
+                    <Image quality={90} src={IMAGES.itemPlan} alt="사업계획서 작성 코칭" width={280} height={280} />
                   </div>
                   <div className="sejin-item-content">
                     <div className="sejin-item-header">

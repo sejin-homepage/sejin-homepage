@@ -25,13 +25,17 @@ export default function ContactPage() {
     formData.getAll('fundType').forEach(v => fundTypes.push(v as string))
 
     const data = {
-      companyName: formData.get('company-name') as string,
-      ceoName: formData.get('ceo-name') as string,
-      phone: formData.get('phone') as string,
-      consultTime: formData.get('consult-time') as string,
-      amount: formData.get('amount') as string,
-      fundType: fundTypes,
-      message: formData.get('message') as string,
+      company: (formData.get('company-name') as string)?.trim() || '',
+      bizno: '',
+      name: (formData.get('ceo-name') as string)?.trim() || '',
+      phone: (formData.get('phone') as string)?.trim() || '',
+      email: '',
+      industry: '',
+      founded: '',
+      consultTime: (formData.get('consult-time') as string) || '',
+      amount: (formData.get('amount') as string) || '',
+      fundType: fundTypes.join(', '),
+      message: (formData.get('message') as string) || '',
     }
 
     try {
@@ -69,12 +73,12 @@ export default function ContactPage() {
         @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
         @keyframes fadeIn{from{opacity:0}to{opacity:1}}
         .sejin-contact-hero{background:linear-gradient(135deg,#FFFFFF 0%,var(--navy) 100%);padding:0;margin:0;min-height:auto;display:flex;align-items:flex-start}
-        .sejin-contact-hero-container{max-width:1400px;margin:0 auto;padding:40px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;width:100%}
-        .sejin-contact-hero-content{max-width:650px}
-        .sejin-contact-hero-headline{font-size:56px;font-weight:700;color:#000;line-height:1.2;margin-bottom:24px;letter-spacing:-0.02em;animation:fadeInUp .8s ease-out}
-        .sejin-contact-hero-subheadline{font-size:20px;font-weight:400;color:#666;line-height:1.6;margin-bottom:40px;animation:fadeInUp .8s ease-out .2s both}
+        .sejin-contact-hero-container{max-width:1200px;margin:0 auto;padding:60px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;width:100%}
+        .sejin-contact-hero-content{max-width:600px}
+        .sejin-contact-hero-headline{font-size:48px;font-weight:700;color:#000;line-height:1.25;margin-bottom:20px;letter-spacing:-0.02em;animation:fadeInUp .8s ease-out}
+        .sejin-contact-hero-subheadline{font-size:18px;font-weight:400;color:#666;line-height:1.7;margin-bottom:36px;animation:fadeInUp .8s ease-out .2s both}
         .sejin-contact-hero-cta-group{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .8s ease-out .4s both}
-        .sejin-contact-hero-disclaimer{font-size:13px;color:#999;line-height:1.5;margin-top:16px}
+        .sejin-contact-hero-disclaimer{font-size:13px;color:#999;line-height:1.6;margin-top:20px}
         .sejin-contact-hero-visual{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeIn 1s ease-out .6s both}
         .sejin-contact-hero-visual img{width:100%;max-width:500px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:70% center;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.15)}
         .sejin-floating-consult,.sejin-floating-overlay,.sejin-bottom-nav{display:none!important}
@@ -163,9 +167,9 @@ export default function ContactPage() {
         .sejin-submit-button:disabled{opacity:0.6;cursor:not-allowed;transform:none}
         .sejin-submit-note{margin-top:12px;font-size:13px;color:#999}
         @media(max-width:1023px){
-          .sejin-contact-hero-container{padding:80px 40px;gap:60px;grid-template-columns:1fr 1fr}
-          .sejin-contact-hero-headline{font-size:48px}
-          .sejin-contact-hero-subheadline{font-size:18px;margin-bottom:32px}
+          .sejin-contact-hero-container{padding:60px 32px;gap:48px;grid-template-columns:1fr 1fr}
+          .sejin-contact-hero-headline{font-size:40px}
+          .sejin-contact-hero-subheadline{font-size:16px;margin-bottom:28px}
           .sejin-contact-hero-visual img{max-width:400px}
           .sejin-contact-process{padding:80px 0}
           .sejin-process-steps{grid-template-columns:repeat(2,1fr);gap:60px 40px}
@@ -277,7 +281,7 @@ export default function ContactPage() {
           </div>
 
           <div className="sejin-contact-hero-visual">
-            <Image src={IMAGES.contactHero} alt="세진컨설팅 - 무료심사" width={500} height={500} priority />
+            <Image unoptimized src={IMAGES.contactHero} alt="세진컨설팅 - 무료심사" width={500} height={500} priority />
           </div>
         </div>
       </section>
@@ -419,7 +423,7 @@ export default function ContactPage() {
               </p>
 
               <div className="sejin-info-image">
-                <Image src={IMAGES.consultantPortrait} alt="정책자금 상담" width={300} height={400} />
+                <Image quality={90} src={IMAGES.consultantPortrait} alt="정책자금 상담" width={300} height={400} />
               </div>
 
               <div className="sejin-contact-box">

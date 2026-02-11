@@ -170,12 +170,12 @@ export default function CertificationPage() {
         .sejin-cert-hero{background:linear-gradient(135deg,#FFFFFF 0%,var(--sejin-bg-ivory) 100%);padding:0;margin:0;min-height:auto;display:flex;align-items:flex-start}
         .sejin-cert-hero-container{max-width:1200px;margin:0 auto;padding:60px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;width:100%}
         .sejin-cert-hero-content{max-width:600px}
-        .sejin-cert-hero-headline{font-size:48px;font-weight:700;color:var(--sejin-text-primary);line-height:1.25;margin-bottom:20px;letter-spacing:-0.02em}
-        .sejin-cert-hero-subheadline{font-size:18px;color:#666;line-height:1.7;margin-bottom:36px}
-        .sejin-cert-hero-cta-group{display:flex;gap:16px;flex-wrap:wrap}
-        .sejin-cert-hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+        .sejin-cert-hero-headline{font-size:48px;font-weight:700;color:var(--sejin-text-primary);line-height:1.25;margin-bottom:20px;letter-spacing:-0.02em;animation:fadeInUp .6s ease-out .1s both}
+        .sejin-cert-hero-subheadline{font-size:18px;color:#666;line-height:1.7;margin-bottom:36px;animation:fadeInUp .6s ease-out .2s both}
+        .sejin-cert-hero-cta-group{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .6s ease-out .3s both}
+        .sejin-cert-hero-visual{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeIn .8s ease-out .5s both}
         .sejin-cert-hero-visual img{width:100%;max-width:500px;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:16px;box-shadow:0 24px 48px rgba(212,165,116,0.15)}
-        .sejin-cert-hero-disclaimer{font-size:13px;color:#999;line-height:1.6;margin-top:20px}
+        .sejin-cert-hero-disclaimer{font-size:13px;color:#999;line-height:1.6;margin-top:20px;animation:fadeInUp .6s ease-out .4s both}
 
         .sejin-cert-category{background:linear-gradient(180deg,#f7f5f0 0%,var(--sejin-bg-ivory) 100%);padding:80px 0}
         .sejin-cert-grid{display:grid;grid-template-columns:repeat(3,340px);gap:30px;justify-content:center}
@@ -337,7 +337,7 @@ export default function CertificationPage() {
           </div>
 
           <div className="sejin-cert-hero-visual">
-            <Image src={IMAGES.certHero} alt="세진컨설팅 - 기업인증 컨설팅" width={500} height={500} priority />
+            <Image unoptimized src={IMAGES.certHero} alt="세진컨설팅 - 기업인증 컨설팅" width={500} height={500} priority />
           </div>
         </div>
       </section>
@@ -415,7 +415,7 @@ export default function CertificationPage() {
                 style={{ display: activeBenefitTab === i ? 'grid' : 'none' }}
               >
                 <div className="sejin-benefit-icon-wrap">
-                  <Image src={IMAGES[tab.image]} alt={tab.title} width={320} height={320} />
+                  <Image unoptimized src={IMAGES[tab.image]} alt={tab.title} width={320} height={320} />
                 </div>
                 <div className="sejin-benefit-detail-content">
                   <h3 className="sejin-benefit-detail-title">{tab.title}</h3>
