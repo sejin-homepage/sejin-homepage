@@ -34,7 +34,7 @@ export default function DashHeader({ onMenuToggle }: DashHeaderProps) {
       <div className="flex items-center gap-3">
         {/* Admin badge */}
         <div className="hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/[0.06]">
-          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-navy to-navy-light flex items-center justify-center">
+          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#0f172e] to-[#1a2547] flex items-center justify-center">
             <svg className="w-3.5 h-3.5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>

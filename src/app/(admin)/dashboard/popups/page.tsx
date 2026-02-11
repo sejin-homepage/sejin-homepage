@@ -348,7 +348,7 @@ export default function PopupsPage() {
                     </div>
                   )}
                   {/* 순서 배지 */}
-                  <span className="absolute top-2 left-2 w-7 h-7 bg-navy text-white text-xs font-bold rounded-lg flex items-center justify-center shadow">
+                  <span className="absolute top-2 left-2 w-7 h-7 bg-[#0f172e] text-white text-xs font-bold rounded-lg flex items-center justify-center shadow">
                     {popup.순서}
                   </span>
                   {/* 상태 배지 */}
@@ -636,7 +636,7 @@ export default function PopupsPage() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="px-6 py-2.5 rounded-xl bg-navy text-white text-sm font-medium hover:bg-navy-light transition-colors disabled:opacity-50 flex items-center gap-2"
+                  className="px-6 py-2.5 rounded-xl bg-[#0f172e] text-white text-sm font-medium hover:bg-[#0f172e]-light transition-colors disabled:opacity-50 flex items-center gap-2"
                 >
                   {saving && (
                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

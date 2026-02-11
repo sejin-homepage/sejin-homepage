@@ -132,7 +132,7 @@ async function sendTelegram(env: Env, data: ConsultData, now: string) {
 function buildCustomerEmailHtml(data: ConsultData, now: string): string {
   return `
 <div style="font-family:'Pretendard',-apple-system,system-ui,sans-serif;max-width:600px;margin:0 auto;background:#fff;">
-  <div style="background:linear-gradient(135deg,#0f172e 0%,#1a2547 50%,#0f172e 100%);padding:40px 30px;border-radius:16px 16px 0 0;text-align:center;">
+  <div style="background:linear-gradient(135deg,#2A1A0E 0%,#3D2B1F 50%,#2A1A0E 100%);padding:40px 30px;border-radius:16px 16px 0 0;text-align:center;">
     <img src="https://sejin.ai.kr/images/logo.png" alt="세진 컨설팅" width="56" height="56" style="display:block;margin:0 auto 14px;border-radius:12px;" />
     <h1 style="color:#d4af37;margin:0;font-size:24px;font-weight:800;">세진 컨설팅</h1>
     <p style="color:rgba(255,255,255,0.8);margin:12px 0 0;font-size:14px;">상담 접수가 완료되었습니다</p>
@@ -164,13 +164,13 @@ function buildCustomerEmailHtml(data: ConsultData, now: string): string {
 
     <div style="text-align:center;padding:20px 0;">
       <p style="margin:0 0 12px;color:#6b7280;font-size:13px;">급한 문의는 아래로 연락 부탁드립니다</p>
-      <a href="tel:15339018" style="display:inline-block;background:linear-gradient(135deg,#d4af37,#c5a028);color:#0f172e;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">
+      <a href="tel:15339018" style="display:inline-block;background:linear-gradient(135deg,#d4af37,#c5a028);color:#2A1A0E;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">
         📞 1877-0773
       </a>
     </div>
   </div>
 
-  <div style="text-align:center;padding:24px;background:linear-gradient(135deg,#0f172e 0%,#1a2547 100%);border-radius:0 0 16px 16px;">
+  <div style="text-align:center;padding:24px;background:linear-gradient(135deg,#2A1A0E 0%,#3D2B1F 100%);border-radius:0 0 16px 16px;">
     <p style="margin:0;font-weight:600;color:#d4af37;font-size:13px;">세진 컨설팅</p>
     <p style="margin:8px 0 0;color:rgba(255,255,255,0.6);font-size:11px;">대전광역시 서구 | 대표전화 1877-0773</p>
     <p style="margin:6px 0 0;color:rgba(255,255,255,0.4);font-size:10px;">본 메일은 홈페이지 상담 접수 시 자동 발송됩니다.</p>
@@ -190,12 +190,12 @@ function buildStaffEmailHtml(data: ConsultData, now: string): string {
 
   return `
 <div style="font-family:'Pretendard',-apple-system,sans-serif;max-width:600px;margin:0 auto;">
-  <div style="background:linear-gradient(135deg,#0f172e 0%,#1a2547 50%,#0f172e 100%);color:#d4af37;padding:30px;border-radius:16px 16px 0 0;">
+  <div style="background:linear-gradient(135deg,#2A1A0E 0%,#3D2B1F 50%,#2A1A0E 100%);color:#d4af37;padding:30px;border-radius:16px 16px 0 0;">
     <h2 style="margin:0;font-size:22px;font-weight:700;">🔔 SEJIN 신규 상담 접수</h2>
     <p style="margin:10px 0 0;opacity:0.95;font-size:14px;">💻 홈페이지 무료상담 폼</p>
   </div>
   <div style="background:white;padding:30px;border:1px solid #e5e7eb;border-top:none;">
-    <div style="background:linear-gradient(135deg,#0f172e 0%,#1a2547 100%);padding:20px;border-radius:12px;margin-bottom:25px;box-shadow:0 4px 15px rgba(212,175,55,0.25);">
+    <div style="background:linear-gradient(135deg,#2A1A0E 0%,#3D2B1F 100%);padding:20px;border-radius:12px;margin-bottom:25px;box-shadow:0 4px 15px rgba(212,175,55,0.25);">
       <h3 style="color:#d4af37;margin:0 0 15px;font-size:18px;font-weight:600;">📞 고객 연락처</h3>
       <table style="width:100%;color:white;font-size:14px;">
         ${row('🏢', '기업명', data.company, true)}
@@ -222,10 +222,10 @@ function buildStaffEmailHtml(data: ConsultData, now: string): string {
     </div>` : ''}
     <div style="text-align:center;padding:15px;background:#f8fafc;border-radius:8px;">
       <p style="margin:0 0 10px;color:#6b7280;font-size:12px;">빠른 연락을 위해 아래 버튼을 클릭하세요</p>
-      <a href="tel:${data.phone.replace(/-/g, '')}" style="display:inline-block;background:linear-gradient(135deg,#d4af37,#c5a028);color:#0f172e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">📞 바로 전화하기</a>
+      <a href="tel:${data.phone.replace(/-/g, '')}" style="display:inline-block;background:linear-gradient(135deg,#d4af37,#c5a028);color:#2A1A0E;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">📞 바로 전화하기</a>
     </div>
   </div>
-  <div style="text-align:center;padding:20px;background:linear-gradient(135deg,#0f172e 0%,#1a2547 100%);border-radius:0 0 16px 16px;color:white;font-size:12px;">
+  <div style="text-align:center;padding:20px;background:linear-gradient(135deg,#2A1A0E 0%,#3D2B1F 100%);border-radius:0 0 16px 16px;color:white;font-size:12px;">
     <p style="margin:0;font-weight:600;color:#d4af37;">세진 컨설팅 | 1877-0773</p>
     <p style="margin:8px 0 0;opacity:0.7;font-size:11px;">접수 시각: ${now}</p>
   </div>

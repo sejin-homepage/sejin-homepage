@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const SITE_URL = 'https://sejin.ai.kr'
-const SITE_NAME = '세진 컨설팅'
+const SITE_NAME = '세진컨설팅'
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -15,15 +15,15 @@ export const baseMetadata: Metadata = {
 
 export const pageMetadata: Record<string, Metadata> = {
   home: {
-    title: '세진 컨설팅 | 정책자금 경영컨설팅 전문기업',
+    title: '세진컨설팅 | 중소기업 정책자금 전문 컨설팅',
     description:
-      '정책자금 심사 통과율 96%, 418건 이상 성장 지원 실적의 세진 컨설팅. 대표자 역량 분석부터 맞춤형 자금 전략 수립, 심사 대비까지 체계적 경영컨설팅을 제공합니다.',
+      '중소기업 정책자금 전문 컨설팅 세진컨설팅. 저금리 정책자금, 벤처인증, 이노비즈 인증까지 대표님의 역량을 분석해 맞춤 자금지원 전략을 설계합니다. 무료 심사 신청으로 시작하세요.',
     keywords:
-      '정책자금, 경영컨설팅, 자금조달, 정부지원금, 창업자금, 운전자금, 시설자금, 세진 컨설팅, 심사통과, 자금전략',
+      '정책자금, 경영컨설팅, 자금조달, 정부지원금, 창업자금, 운전자금, 시설자금, 세진컨설팅, 벤처인증, 이노비즈',
     openGraph: {
-      title: '세진 컨설팅 | 정책자금 경영컨설팅 전문기업',
+      title: '세진컨설팅 | 중소기업 정책자금 전문 컨설팅',
       description:
-        '심사 통과율 96%, 418건+ 성장 지원 실적. 정책자금 전문 경영컨설팅.',
+        '저금리 정책자금, 벤처인증, 이노비즈 인증까지. 대표님의 역량을 분석해 맞춤 자금지원 전략을 설계합니다.',
       url: SITE_URL,
       siteName: SITE_NAME,
       locale: 'ko_KR',
@@ -31,63 +31,21 @@ export const pageMetadata: Record<string, Metadata> = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: '세진 컨설팅 | 정책자금 경영컨설팅',
+      title: '세진컨설팅 | 중소기업 정책자금 전문 컨설팅',
       description:
-        '심사 통과율 96%, 체계적 자금조달 전략. 무료 상담 신청하세요.',
+        '저금리 정책자금, 맞춤 자금조달 전략. 무료 심사 신청하세요.',
     },
     alternates: { canonical: SITE_URL },
   },
 
-  company: {
-    title: '회사소개 | 세진 컨설팅 - 정책자금 성장 전문 파트너',
-    description:
-      '세진 컨설팅는 대표자 역량을 강화하는 성장 전문 파트너입니다. 전담 준비 지원, 체계적 프로세스, 투명한 운영으로 정책자금 심사 통과율 96%를 달성합니다.',
-    openGraph: {
-      title: '회사소개 | 세진 컨설팅',
-      description:
-        '대표자 역량 강화 성장 전문 파트너. 체계적 사전 준비 시스템 운영.',
-      url: `${SITE_URL}/company`,
-      siteName: SITE_NAME,
-      locale: 'ko_KR',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: '회사소개 | 세진 컨설팅',
-      description: '정책자금 성장 전문 파트너. 체계적 사전 준비 시스템.',
-    },
-    alternates: { canonical: `${SITE_URL}/company` },
-  },
-
-  process: {
-    title: '진행과정 | 세진 컨설팅 - 정책자금 성장 지원 프로세스',
-    description:
-      '세진 컨설팅의 정책자금 성장 지원 6단계 프로세스. 정밀 역량 분석, 전문가 매칭, 맞춤형 자금 전략, 전과정 밀착 지원으로 심사 통과율 96%를 기록합니다.',
-    openGraph: {
-      title: '진행과정 | 세진 컨설팅',
-      description:
-        '6단계 체계적 프로세스로 정책자금 심사 통과율 96% 달성.',
-      url: `${SITE_URL}/process`,
-      siteName: SITE_NAME,
-      locale: 'ko_KR',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: '진행과정 | 세진 컨설팅',
-      description: '정책자금 심사 통과율 96%의 체계적 프로세스.',
-    },
-    alternates: { canonical: `${SITE_URL}/process` },
-  },
-
   fund: {
-    title: '자금상담 | 세진 컨설팅 - 정책자금·기업대출·보증서 전문',
+    title: '정책자금 컨설팅 | 저금리 정책자금 종류·프로세스 - 세진컨설팅',
     description:
-      '정책자금 최대 10억, 기업대출 최대 30억, 보증서 최대 15억까지. 세진 컨설팅의 맞춤형 자금 전략으로 평균 조달액 2.8억, 심사 통과율 96%를 달성하세요.',
+      '창업자금, 운전자금, 시설자금, 긴급자금 등 중소기업 맞춤 정책자금 컨설팅. 연 2~4% 저금리 정책자금으로 자금 부담을 줄이세요.',
     openGraph: {
-      title: '자금상담 | 세진 컨설팅',
+      title: '정책자금 컨설팅 | 세진컨설팅',
       description:
-        '정책자금·기업대출·보증서 맞춤 전략. 평균 조달액 2.8억.',
+        '중소기업 맞춤 정책자금 컨설팅. 연 2~4% 저금리 자금조달 전략.',
       url: `${SITE_URL}/fund`,
       siteName: SITE_NAME,
       locale: 'ko_KR',
@@ -95,51 +53,9 @@ export const pageMetadata: Record<string, Metadata> = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: '자금상담 | 세진 컨설팅',
-      description: '정책자금 최대 10억, 평균 조달액 2.8억. 무료 상담 신청.',
+      title: '정책자금 컨설팅 | 세진컨설팅',
+      description: '연 2~4% 저금리 정책자금. 무료 심사 신청.',
     },
     alternates: { canonical: `${SITE_URL}/fund` },
-  },
-
-  pro: {
-    title: '전문서비스 | 세진 컨설팅 - 법무·세무·회계·노무 전문가 네트워크',
-    description:
-      '법무, 세무, 회계, 노무 전문가를 맞춤형으로 연결하는 세진 컨설팅. 418+ 성공 기업의 검증된 전문가 네트워크로 자금 조달 성공률을 높이세요.',
-    openGraph: {
-      title: '전문서비스 | 세진 컨설팅',
-      description:
-        '법무·세무·회계·노무 전문가 네트워크. 418+ 성공 기업 실적.',
-      url: `${SITE_URL}/pro`,
-      siteName: SITE_NAME,
-      locale: 'ko_KR',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: '전문서비스 | 세진 컨설팅',
-      description: '법무·세무·회계·노무 전문가 매칭 서비스.',
-    },
-    alternates: { canonical: `${SITE_URL}/pro` },
-  },
-
-  mkt: {
-    title: '온라인마케팅 | 세진 컨설팅 - 데이터 기반 통합 마케팅',
-    description:
-      '홈페이지 제작, 검색광고, SNS 마케팅, 블로그 마케팅, AI 자동화, 퍼포먼스 마케팅까지. 데이터 기반 전략으로 평균 매출 상승률 250%를 달성하는 통합 마케팅 솔루션.',
-    openGraph: {
-      title: '온라인마케팅 | 세진 컨설팅',
-      description:
-        '데이터 기반 통합 마케팅. 평균 매출 상승률 250% 달성.',
-      url: `${SITE_URL}/mkt`,
-      siteName: SITE_NAME,
-      locale: 'ko_KR',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: '온라인마케팅 | 세진 컨설팅',
-      description: '홈페이지·검색광고·SNS·블로그 통합 마케팅 솔루션.',
-    },
-    alternates: { canonical: `${SITE_URL}/mkt` },
   },
 }

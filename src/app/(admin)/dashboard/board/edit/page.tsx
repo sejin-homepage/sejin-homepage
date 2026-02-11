@@ -570,7 +570,7 @@ function BoardEditor() {
           <button
             type="submit"
             disabled={saving}
-            className="px-8 py-2.5 rounded-xl bg-navy text-white text-sm font-medium hover:bg-navy-light transition-colors disabled:opacity-50 flex items-center gap-2"
+            className="px-8 py-2.5 rounded-xl bg-[#0f172e] text-white text-sm font-medium hover:bg-[#1a2547] transition-colors disabled:opacity-50 flex items-center gap-2"
           >
             {saving && (
               <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

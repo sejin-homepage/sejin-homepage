@@ -41,7 +41,7 @@ const STATUS_COLORS: Record<string, string> = {
 }
 
 const STATUS_COUNTER_STYLES: Record<string, { bg: string; active: string; icon: string }> = {
-  전체: { bg: 'bg-white/[0.04] border-white/[0.08]', active: 'bg-navy text-white border-navy', icon: 'text-gray-500' },
+  전체: { bg: 'bg-white/[0.04] border-white/[0.08]', active: 'bg-[#0f172e] text-white border-[#0f172e]', icon: 'text-gray-500' },
   신규: { bg: 'bg-blue-500/10 border-blue-500/20', active: 'bg-blue-500 text-white border-blue-500', icon: 'text-blue-400' },
   대기: { bg: 'bg-amber-500/10 border-amber-500/20', active: 'bg-amber-500 text-white border-amber-500', icon: 'text-amber-400' },
   상담중: { bg: 'bg-purple-500/10 border-purple-500/20', active: 'bg-purple-500 text-white border-purple-500', icon: 'text-purple-400' },

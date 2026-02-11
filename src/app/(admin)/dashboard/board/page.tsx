@@ -22,7 +22,7 @@ const CATEGORY_BADGE: Record<string, string> = {
 }
 
 const CATEGORY_TAB_ACTIVE: Record<string, string> = {
-  전체: 'bg-navy text-white border-navy',
+  전체: 'bg-[#0f172e] text-white border-[#0f172e]',
   성공사례: 'bg-blue-500 text-white border-blue-500',
   정책자금: 'bg-green-500 text-white border-green-500',
   인증지원: 'bg-purple-500 text-white border-purple-500',
@@ -144,7 +144,7 @@ export default function BoardManagePage() {
         </div>
         <Link
           href="/dashboard/board/edit"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-navy text-white text-sm font-medium hover:bg-navy-light transition-all active:scale-95 shadow-sm"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0f172e] text-white text-sm font-medium hover:bg-[#0f172e]-light transition-all active:scale-95 shadow-sm"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

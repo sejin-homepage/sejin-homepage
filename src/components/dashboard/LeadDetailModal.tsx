@@ -292,7 +292,7 @@ export default function LeadDetailModal({ lead, onClose, onUpdate }: LeadDetailM
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="px-6 py-2.5 rounded-xl bg-navy text-white text-[13px] font-semibold hover:bg-navy-light active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm shadow-navy/20"
+                className="px-6 py-2.5 rounded-xl bg-[#0f172e] text-white text-[13px] font-semibold hover:bg-[#1a2547] active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm shadow-[#0f172e]/20"
               >
                 {saving ? (
                   <span className="flex items-center gap-2">

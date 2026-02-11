@@ -84,7 +84,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-0 left-0 z-50 h-full w-[260px] bg-navy-dark
+          fixed top-0 left-0 z-50 h-full w-[260px] bg-[#0d1829]
           flex flex-col
           transform transition-transform duration-300 ease-in-out
           md:translate-x-0 md:sticky md:top-0 md:h-screen md:z-auto
@@ -95,7 +95,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="h-[72px] flex items-center px-6 border-b border-white/[0.06]">
           <Link href="/dashboard" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg shadow-gold/20">
-              <span className="text-navy-dark font-extrabold text-xs tracking-wider">SEJIN</span>
+              <span className="text-[#0d1829] font-extrabold text-xs tracking-wider">SEJIN</span>
             </div>
             <div className="flex flex-col">
               <span className="text-white font-bold text-[15px] leading-tight">SEJIN Admin</span>

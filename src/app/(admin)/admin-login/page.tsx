@@ -50,7 +50,7 @@ function LoginForm() {
         <p className="text-gray-400 mt-1 text-sm">관리자 로그인</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-navy-light rounded-2xl p-8 border border-white/10">
+      <form onSubmit={handleSubmit} className="bg-[#1a2547] rounded-2xl p-8 border border-white/10">
         <div className="mb-6">
           <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
             비밀번호
@@ -61,7 +61,7 @@ function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="관리자 비밀번호를 입력하세요"
-            className="w-full px-4 py-3 rounded-xl bg-navy border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
+            className="w-full px-4 py-3 rounded-xl bg-[#0f172e] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
             autoFocus
             required
           />
@@ -76,7 +76,7 @@ function LoginForm() {
         <button
           type="submit"
           disabled={loading || !password}
-          className="w-full py-3 rounded-xl bg-gold text-navy-dark font-semibold hover:bg-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 rounded-xl bg-gold text-[#0d1829] font-semibold hover:bg-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? '로그인 중...' : '로그인'}
         </button>
@@ -91,7 +91,7 @@ function LoginForm() {
 
 export default function AdminLoginPage() {
   return (
-    <div className="min-h-screen bg-navy flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#0f172e] flex items-center justify-center px-4">
       <Suspense fallback={
         <div className="w-full max-w-md text-center text-gray-400">로딩 중...</div>
       }>
