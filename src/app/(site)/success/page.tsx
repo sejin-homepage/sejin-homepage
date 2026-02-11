@@ -91,6 +91,9 @@ export default function SuccessPage() {
           .sejin-aftercare-container{grid-template-columns:1fr;gap:40px;padding:0 20px}
           .sejin-aftercare-title{font-size:26px;width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
           .sejin-aftercare-subtitle{font-size:15px;margin-bottom:32px;width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
+          .sejin-aftercare-content{display:flex;flex-direction:column;align-items:center}
+          .sejin-timeline{width:fit-content}
+          .sejin-aftercare-cta{width:fit-content}
           .sejin-aftercare-visual{order:-1}
           .sejin-aftercare-visual img{max-width:100%;aspect-ratio:4/3;border-radius:12px}
           .sejin-success-cta-bar{padding:32px 20px}
