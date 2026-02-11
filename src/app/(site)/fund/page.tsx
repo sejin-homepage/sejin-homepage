@@ -148,6 +148,7 @@ export default function FundPage() {
           .sejin-process-step{padding:24px 20px}
           .sejin-step-number{width:48px;height:48px;font-size:20px;margin-bottom:16px}
           .sejin-step-title{font-size:18px}
+          .sejin-step-description{display:inline-block;text-align:left}
           .sejin-fund-final-cta{padding:50px 0}
           .sejin-final-cta-container{padding:0 20px}
           .sejin-final-cta-main-text{font-size:24px;word-break:keep-all}

@@ -256,6 +256,7 @@ export default function CertificationPage() {
           .sejin-cert-hero-cta-group .sejin-cta-primary,.sejin-cert-hero-cta-group .sejin-cta-ghost{width:100%;justify-content:center}
           .sejin-cert-hero-visual{order:-1;width:100%}
           .sejin-cert-hero-visual img{max-width:100%;width:100%;aspect-ratio:4/5;border-radius:0;box-shadow:none}
+          .sejin-section-title{font-size:20px;word-break:keep-all}
           .sejin-cert-category{padding:48px 0}
           .sejin-cert-grid{grid-template-columns:repeat(3,1fr);gap:12px;padding:0 8px}
           .sejin-cert-card{padding:16px 8px;border-radius:8px}
@@ -501,7 +502,7 @@ export default function CertificationPage() {
             <span className="highlight">지금 바로 확인하세요</span>
           </h2>
           <p className="sejin-cert-final-cta-sub">
-            무료 인증 심사로 최적의 인증을 먼저 파악하고 시작하세요
+            무료 인증 심사로 최적의 인증을<br/>먼저 파악하고 시작하세요
           </p>
 
           <div className="sejin-cert-final-cta-buttons">

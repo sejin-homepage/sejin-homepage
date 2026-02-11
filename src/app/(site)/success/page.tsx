@@ -89,8 +89,8 @@ export default function SuccessPage() {
           .sejin-success-hero-visual img{max-width:100%;width:100%;aspect-ratio:4/5;border-radius:0;box-shadow:none}
           .sejin-aftercare{padding:60px 0}
           .sejin-aftercare-container{grid-template-columns:1fr;gap:40px;padding:0 20px}
-          .sejin-aftercare-title{font-size:26px}
-          .sejin-aftercare-subtitle{font-size:15px;margin-bottom:32px}
+          .sejin-aftercare-title{font-size:26px;width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
+          .sejin-aftercare-subtitle{font-size:15px;margin-bottom:32px;width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
           .sejin-aftercare-visual{order:-1}
           .sejin-aftercare-visual img{max-width:100%;aspect-ratio:4/3;border-radius:12px}
           .sejin-success-cta-bar{padding:32px 20px}
