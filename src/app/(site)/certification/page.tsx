@@ -44,7 +44,7 @@ const READY_TABS = [
   {
     label: '벤처확인기업',
     title: '벤처확인기업 인증 요건',
-    desc: '벤처투자, 연구개발비, 매출액 등 기술성장성을 기준으로 평가합니다',
+    desc: <>벤처투자, 연구개발비, 매출액 등<br className="mobile-br" />기술성장성을 기준으로 평가합니다</>,
     items: [
       '업력 7년 미만 기업',
       '벤처투자 확인 또는 기술평가 보증/대출',
@@ -57,7 +57,7 @@ const READY_TABS = [
   {
     label: '이노비즈',
     title: '이노비즈 인증 요건',
-    desc: '기술혁신성과 연구개발 투자 실적을 중심으로 평가합니다',
+    desc: <>기술혁신성과 연구개발<br className="mobile-br" />투자 실적을 중심으로 평가합니다</>,
     items: [
       '중소기업 요건 충족',
       '최근 3년 연구개발비 투자 실적',
@@ -70,7 +70,7 @@ const READY_TABS = [
   {
     label: '메인비즈',
     title: '메인비즈 인증 요건',
-    desc: '경영시스템과 경영혁신 실적을 종합적으로 평가합니다',
+    desc: <>경영시스템과 경영혁신 실적을<br className="mobile-br" />종합적으로 평가합니다</>,
     items: [
       '중소기업 요건 충족',
       '경영시스템 구축 (인사, 회계, 생산 등)',
@@ -83,7 +83,7 @@ const READY_TABS = [
   {
     label: '기업부설연구소',
     title: '기업부설연구소 인증 요건',
-    desc: '연구 인력과 연구 시설, 연구개발 투자를 중심으로 평가합니다',
+    desc: <>연구 인력과 연구 시설,<br className="mobile-br" />연구개발 투자를 중심으로 평가합니다</>,
     items: [
       '전담 연구 인력 5명 이상 보유',
       '연구전담요원 1명 이상 (학사 이상)',
@@ -96,7 +96,7 @@ const READY_TABS = [
   {
     label: 'ISO',
     title: 'ISO 인증 요건',
-    desc: '품질경영시스템(ISO 9001) 및 환경경영시스템(ISO 14001) 기준을 평가합니다',
+    desc: <>품질경영시스템(ISO 9001) 및<br className="mobile-br" />환경경영시스템(ISO 14001)<br className="mobile-br" />기준을 평가합니다</>,
     items: [
       '품질경영시스템 문서화 (품질매뉴얼 절차서)',
       '내부심사 실시 (1회 이상)',
@@ -109,7 +109,7 @@ const READY_TABS = [
   {
     label: '여성기업',
     title: '여성기업 인증 요건',
-    desc: '여성 대표자 여부 및 여성 소유 지분 비율을 기준으로 평가합니다',
+    desc: <>여성 대표자 여부 및<br className="mobile-br" />여성 소유 지분 비율을<br className="mobile-br" />기준으로 평가합니다</>,
     items: [
       '여성이 대표이사 또는 대표자',
       '여성 소유 지분 50% 이상',
@@ -167,6 +167,7 @@ export default function CertificationPage() {
   return (
     <>
       <style>{`
+        .mobile-br{display:none}
         .sejin-cert-hero{background:linear-gradient(135deg,#FFFFFF 0%,var(--sejin-bg-ivory) 100%);padding:0;margin:0;min-height:auto;display:flex;align-items:flex-start}
         .sejin-cert-hero-container{max-width:1200px;margin:0 auto;padding:60px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;width:100%}
         .sejin-cert-hero-content{max-width:600px}
@@ -248,6 +249,7 @@ export default function CertificationPage() {
           .sejin-cert-final-cta-text{font-size:36px}
         }
         @media(max-width:767px){
+          .mobile-br{display:inline}
           .sejin-cert-hero-container{grid-template-columns:1fr;padding:0;gap:0;text-align:center}
           .sejin-cert-hero-content{max-width:100%;padding:40px 20px;order:1}
           .sejin-cert-hero-headline{font-size:26px;margin-bottom:16px;line-height:1.35;word-break:keep-all}
@@ -256,7 +258,7 @@ export default function CertificationPage() {
           .sejin-cert-hero-cta-group .sejin-cta-primary,.sejin-cert-hero-cta-group .sejin-cta-ghost{width:100%;justify-content:center}
           .sejin-cert-hero-visual{order:-1;width:100%}
           .sejin-cert-hero-visual img{max-width:100%;width:100%;aspect-ratio:4/5;border-radius:0;box-shadow:none}
-          .sejin-section-title{font-size:20px;word-break:keep-all}
+          .sejin-section-title{font-size:18px;word-break:keep-all}
           .sejin-cert-category{padding:48px 0}
           .sejin-cert-grid{grid-template-columns:repeat(3,1fr);gap:12px;padding:0 8px}
           .sejin-cert-card{padding:16px 8px;border-radius:8px}
@@ -292,7 +294,7 @@ export default function CertificationPage() {
           .sejin-ready-cta{margin-top:28px;padding-top:20px}
           .sejin-ready-cta .sejin-cta-primary{width:100%;justify-content:center}
           .sejin-cert-final-cta{padding:48px 20px}
-          .sejin-cert-final-cta-text{font-size:24px;word-break:keep-all}
+          .sejin-cert-final-cta-text{font-size:22px;word-break:keep-all}
           .sejin-cert-final-cta-sub{font-size:14px;margin-bottom:28px}
           .sejin-cert-final-cta-buttons{flex-direction:column;gap:12px}
           .sejin-cert-final-cta-buttons .sejin-cta-primary{width:100%;justify-content:center}
